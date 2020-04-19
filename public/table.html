@@ -13,44 +13,44 @@
 </body>
 
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $.get("/get_reviews",
-            function(data, status){
+            function (data, status) {
                 //alert("Data: " + data[0].rating_amount + "\nStatus: " + status);
                 buildHtmlTable('#review', data);
-        });
-    } );
+            });
+    });
 
     function buildHtmlTable(selector, myList) {
-    var columns = addAllColumnHeaders(myList, selector);
+        var columns = addAllColumnHeaders(myList, selector);
 
-    for (var i = 0; i < myList.length; i++) {
-        var row$ = $('<tr/>');
-        for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-        var cellValue = myList[i][columns[colIndex]];
-        if (cellValue == null) cellValue = "";
-        row$.append($('<td/>').html(cellValue));
+        for (var i = 0; i < myList.length; i++) {
+            var row$ = $('<tr/>');
+            for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+                var cellValue = myList[i][columns[colIndex]];
+                if (cellValue == null) cellValue = "";
+                row$.append($('<td/>').html(cellValue));
+            }
+            $(selector).append(row$);
         }
-        $(selector).append(row$);
-    }
     }
 
     function addAllColumnHeaders(myList, selector) {
-    var columnSet = [];
-    var headerTr$ = $('<tr/>');
+        var columnSet = [];
+        var headerTr$ = $('<tr/>');
 
-    for (var i = 0; i < myList.length; i++) {
-        var rowHash = myList[i];
-        for (var key in rowHash) {
-        if ($.inArray(key, columnSet) == -1) {
-            columnSet.push(key);
-            headerTr$.append($('<th/>').html(key));
+        for (var i = 0; i < myList.length; i++) {
+            var rowHash = myList[i];
+            for (var key in rowHash) {
+                if ($.inArray(key, columnSet) == -1) {
+                    columnSet.push(key);
+                    headerTr$.append($('<th/>').html(key));
+                }
+            }
         }
-        }
-    }
-    $(selector).append(headerTr$);
+        $(selector).append(headerTr$);
 
-    return columnSet;
+        return columnSet;
     }
 </script>
 
