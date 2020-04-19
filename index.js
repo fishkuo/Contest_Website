@@ -36,7 +36,7 @@ app.post("/add_review", (req, res) => {
         // console.log("Query Successed!");
         res.end();
     });
-    res.redirect('/');
+    res.redirect('/table.html');
     res.end();
 });
 
