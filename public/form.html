@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="/add_review" method="POST">
+        <label for="id">請輸入編號: </label>
+        <input type="number" placeholder="編號" name="id" min="1"><br>
+        <label for="rating">請輸入評分(1 ~ 10): </label>
+        <input type="number" placeholder="評分" name="rating" min="1" max="10">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

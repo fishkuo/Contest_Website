@@ -1,0 +1,33 @@
+{
+  "name": "contest_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuchia0221/Contest_Website.git"
+  },
+  "author": "Aaron Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuchia0221/Contest_Website/issues"
+  },
+  "homepage": "https://github.com/yuchia0221/Contest_Website#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "datatables.net-dt": "^1.10.20",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "tabulator-tables": "^4.6.2",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
