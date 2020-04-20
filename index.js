@@ -5,7 +5,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -19,7 +19,7 @@ function getConnection() {
         password: password,
         database: 'db'
     });
-}
+};
 
 app.post("/add_review", (req, res) => {
     var id = parseInt(req.body.id);
