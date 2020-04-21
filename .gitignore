@@ -105,6 +105,7 @@ dist
 
 # Ignored File
 `~
+.vscode
 
 # Sercet Key
 user.json
