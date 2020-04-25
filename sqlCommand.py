@@ -118,4 +118,7 @@ if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
 
     db = MySQL()
+    db.create_table("childMessage")
+    init_child()
+    init_child_demand()
     init_elderly_demand()
