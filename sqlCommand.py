@@ -66,7 +66,7 @@ class MySQL:
             return json.load(table)
 
 
-def init_child(file="fake.csv"):
+def init_child(file="csv/childCareSystem.csv"):
     def read_csv(file: str) -> List[Tuple]:
         df = pd.read_csv(file, encoding="ANSI")
 
@@ -74,9 +74,26 @@ def init_child(file="fake.csv"):
 
     global db
 
-    db.create_table("child")
+    db.create_table("childCareSystem")
     data = read_csv(file)
-    SQL = "INSERT INTO `child` (name, type, city, district, address, longitude, latitude, accommodate) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
+    SQL = "INSERT INTO `childCareSystem` (name, type, city, district, address, longitude, latitude, capacity) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
+    db.insert_value(SQL, data)
+
+
+def init_child_demand(file="csv/predict_child.csv"):
+    def read_csv(file: str) -> List[Tuple]:
+        df = pd.read_csv(file, encoding="ANSI")
+
+        return [tuple(i) for i in df.values.tolist()]
+
+    global db
+
+    db.create_table("childSystemDemand")
+    data = read_csv(file)
+    SQL = """INSERT INTO `childSystemDemand` (town, town_id, year_99, year_100, year_101, 
+        year_102, year_103, year_104, year_105, year_106, year_107, year_108, year_109, 
+        year_110, year_111, year_112, year_113, year_114, year_115, year_116, year_117, year_118) 
+        VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
     db.insert_value(SQL, data)
 
 
@@ -84,4 +101,4 @@ if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
 
     db = MySQL()
-    init_child()
+    # init_child_demand()
