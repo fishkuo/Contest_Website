@@ -53,5 +53,17 @@ app.get("/get_reviews", (req, res) => {
     });
 });
 
+app.get("/get_child", (req, res) => {
+    const QUERY_STRING = "SELECT name FROM review ";
+    getConnection().query(QUERY_STRING, (err, result, field) => {
+        if (err) {
+            console.log("Query Failed: ", err);
+            res.sendStatus(500);
+            return;
+        }
+        res.send(result);
+    });
+});
+
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
