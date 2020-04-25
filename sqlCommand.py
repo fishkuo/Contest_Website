@@ -66,12 +66,13 @@ class MySQL:
             return json.load(table)
 
 
+def read_csv(file: str) -> List[Tuple]:
+    df = pd.read_csv(file, encoding="ANSI")
+
+    return [tuple(i) for i in df.values.tolist()]
+
+
 def init_child(file="csv/childCareSystem.csv"):
-    def read_csv(file: str) -> List[Tuple]:
-        df = pd.read_csv(file, encoding="ANSI")
-
-        return [tuple(i) for i in df.values.tolist()]
-
     global db
 
     db.create_table("childCareSystem")
@@ -81,11 +82,6 @@ def init_child(file="csv/childCareSystem.csv"):
 
 
 def init_child_demand(file="csv/predict_child.csv"):
-    def read_csv(file: str) -> List[Tuple]:
-        df = pd.read_csv(file, encoding="ANSI")
-
-        return [tuple(i) for i in df.values.tolist()]
-
     global db
 
     db.create_table("childSystemDemand")
@@ -98,11 +94,6 @@ def init_child_demand(file="csv/predict_child.csv"):
 
 
 def init_elderly_demand(file="csv/predict_old.csv"):
-    def read_csv(file: str) -> List[Tuple]:
-        df = pd.read_csv(file, encoding="ANSI")
-
-        return [tuple(i) for i in df.values.tolist()]
-
     global db
 
     db.create_table("elderlySystemDemand")
