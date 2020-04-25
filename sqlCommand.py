@@ -97,8 +97,25 @@ def init_child_demand(file="csv/predict_child.csv"):
     db.insert_value(SQL, data)
 
 
+def init_elderly_demand(file="csv/predict_old.csv"):
+    def read_csv(file: str) -> List[Tuple]:
+        df = pd.read_csv(file, encoding="ANSI")
+
+        return [tuple(i) for i in df.values.tolist()]
+
+    global db
+
+    db.create_table("elderlySystemDemand")
+    data = read_csv(file)
+    SQL = """INSERT INTO `childSystemDemand` (town, town_id, year_99, year_100, year_101, 
+        year_102, year_103, year_104, year_105, year_106, year_107, year_108, year_109, 
+        year_110, year_111, year_112, year_113, year_114, year_115, year_116, year_117, year_118) 
+        VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+    db.insert_value(SQL, data)
+
+
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
 
     db = MySQL()
-    # init_child_demand()
+    init_elderly_demand()
