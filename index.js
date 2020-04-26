@@ -26,26 +26,21 @@ app.post("/add_review", (req, res) => {
     var id = req.body.name;
     var rating = parseInt(req.body.rating);
 
-    const QUERY_STRING1 =
-        "INSERT INTO `childMessage` (name, date, message, rating) VALUES (?, ?, ?, ?)";
+    const QUERY_STRING1 = "INSERT INTO `childMessage` (name, date, message, rating) VALUES (?, ?, ?, ?)";
     var date =
         date_ob.getFullYear() +
         "-" +
         ("0" + (date_ob.getMonth() + 1)).slice(-2) +
         "-" +
         ("0" + date_ob.getDate()).slice(-2);
-    getConnection().query(
-        QUERY_STRING1,
-        [id, date, "", rating],
-        (err, result, field) => {
-            if (err) {
-                console.log("Query Failed: ", err);
-                res.sendStatus(500);
-                return;
-            }
-            res.end();
+    getConnection().query(QUERY_STRING1, [id, date, "", rating], (err, result, field) => {
+        if (err) {
+            console.log("Query Failed: ", err);
+            res.sendStatus(500);
+            return;
         }
-    );
+        res.end();
+    });
 
     const QUERY_STRING2 =
         "UPDATE childCareSystem SET rating_amount = rating_amount + 1, \
@@ -63,8 +58,7 @@ app.post("/add_review", (req, res) => {
 });
 
 app.get("/get_reviews", (req, res) => {
-    const QUERY_STRING =
-        "SELECT id, name, rating_amount, rating_score, rating_average FROM childCareSystem";
+    const QUERY_STRING = "SELECT id, name, rating_amount, rating_score, rating_average FROM childCareSystem";
     getConnection().query(QUERY_STRING, (err, result, field) => {
         if (err) {
             console.log("Query Failed: ", err);
@@ -75,10 +69,19 @@ app.get("/get_reviews", (req, res) => {
     });
 });
 
-app.get("/test", (req, res) => {
-    var content = fs.readFileSync("test.json").toString("utf8");
-    var cityDict = JSON.parse(content);
-    res.send(cityDict[req.query.city]);
+app.get("/get_reviews", (req, res) => {
+    const QUERY_STRING =
+        "SELECT name, type, address, capacity, rating, rating_amount, rating_average \
+         FROM childCareSystem WHERE city = ? ORDER BY rating_average DESC LIMIT 5;";
+
+    getConnection().query(QUERY_STRING, [req.query.city], (err, result, field) => {
+        if (err) {
+            console.log("Query Failed: ", err);
+            res.sendStatus(500);
+            return;
+        }
+        res.send(result);
+    });
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
