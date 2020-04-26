@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Form</title>
         <link rel="stylesheet" href="css/form.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -46,8 +47,17 @@
                 <button type="submit">送出評分</button>
             </form>
         </div>
+        <script>
+            var city = document.getElementById("city_menu");
+            city.addEventListener("change", function () {
+                $(document).ready(function () {
+                    $.get("/get_city?city=" + city.value, function (data, status) {
+                        console.log(data);
+                    });
+                });
+            });
+        </script>
         <script src="dynamic.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
     </body>
 </html>
