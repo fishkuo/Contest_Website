@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Table</title>
+    </head>
 
-<head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table</title>
-</head>
+    <body>
+        <table id="review" border="1"></table>
+    </body>
 
-<body>
-    <table id="review" border="1"> </table>
-</body>
-
-<script>
-    $(document).ready(function () {
-        $.get("/get_reviews",
-            function (data, status) {
+    <script>
+        $(document).ready(function () {
+            $.get("/get_reviews", function (data, status) {
                 //alert("Data: " + data[0].rating_amount + "\nStatus: " + status);
-                buildHtmlTable('#review', data);
+                buildHtmlTable("#review", data);
             });
-    });
+        });
 
-    function buildHtmlTable(selector, myList) {
-        var columns = addAllColumnHeaders(myList, selector);
+        function buildHtmlTable(selector, myList) {
+            var columns = addAllColumnHeaders(myList, selector);
 
-        for (var i = 0; i < myList.length; i++) {
-            var row$ = $('<tr/>');
-            for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-                var cellValue = myList[i][columns[colIndex]];
-                if (cellValue == null) cellValue = "";
-                row$.append($('<td/>').html(cellValue));
+            for (var i = 0; i < myList.length; i++) {
+                var row$ = $("<tr/>");
+                for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+                    var cellValue = myList[i][columns[colIndex]];
+                    if (cellValue == null) cellValue = "";
+                    row$.append($("<td/>").html(cellValue));
+                }
+                $(selector).append(row$);
             }
-            $(selector).append(row$);
         }
-    }
 
-    function addAllColumnHeaders(myList, selector) {
-        var columnSet = [];
-        var headerTr$ = $('<tr/>');
+        function addAllColumnHeaders(myList, selector) {
+            var columnSet = [];
+            var headerTr$ = $("<tr/>");
 
-        for (var i = 0; i < myList.length; i++) {
-            var rowHash = myList[i];
-            for (var key in rowHash) {
-                if ($.inArray(key, columnSet) == -1) {
-                    columnSet.push(key);
-                    headerTr$.append($('<th/>').html(key));
+            for (var i = 0; i < myList.length; i++) {
+                var rowHash = myList[i];
+                for (var key in rowHash) {
+                    if ($.inArray(key, columnSet) == -1) {
+                        columnSet.push(key);
+                        headerTr$.append($("<th/>").html(key));
+                    }
                 }
             }
+            $(selector).append(headerTr$);
+
+            return columnSet;
         }
-        $(selector).append(headerTr$);
-
-        return columnSet;
-    }
-</script>
-
+    </script>
 </html>
