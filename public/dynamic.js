@@ -6,13 +6,13 @@ city.addEventListener("change", function () {
         .then((response) => response.json())
         .then((json) => {
             var selected = json[this.value];
-            while (id.options.length > 0) {
-                id.options.remove(0);
-            }
-
-            Array.from(selected).forEach(function (element) {
-                var option = new Option(element, element);
-                id.appendChild(option);
-            });
         });
+    while (id.options.length > 0) {
+        id.options.remove(0);
+    }
+
+    Array.from(selected).forEach(function (element) {
+        var option = new Option(element, element);
+        id.appendChild(option);
+    });
 });
