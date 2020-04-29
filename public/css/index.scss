@@ -7,12 +7,15 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 	.reference {
 		display: none;
 	}
+
 	.container {
 		width: 800px;
 		height: 600px;
+
 		// background-color: blanchedalmond;
 		.h1 {
 			padding-top: 30px;
@@ -22,29 +25,35 @@ body {
 			font-size: larger;
 			text-shadow: white 0.05em 0.05em 0.08em;
 		}
+
 		.house {
 			display: flex;
 			justify-content: center;
 			padding-top: 30px;
+
 			img {
 				width: 15%;
 				height: auto;
 			}
 		}
+
 		.people {
 			display: flex;
 			justify-content: center;
 			padding-top: 30px;
 		}
+
 		.button {
 			display: flex;
 			justify-content: center;
 			padding-top: 50px;
+
 			button {
 				a {
 					text-decoration: none;
 					color: white;
 				}
+
 				margin-left: 30px;
 				margin-right: 30px;
 				border: none;
@@ -55,6 +64,7 @@ body {
 				font-size: larger;
 				border-radius: 22px;
 				box-shadow: black 0.05em 0.05em 0.08em;
+
 				&:hover {
 					background-color: #c1e5f6;
 					color: black;
