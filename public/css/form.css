@@ -1,36 +1,44 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   background-color: #335781;
-  color: #ffffff;
-}
-
-body .container {
-  padding: 40px;
-  border-radius: 15px;
-  background-color: #789ac1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-body .container .form {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  height: 250px;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: #789ac1;
+}
+
+body .container .form {
+  width: 250px;
   font-size: large;
 }
 
-body .container .form button {
+body .container .form .submit-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .form .submit-button button {
   background-color: #335781;
   border: none;
   padding: 10px;
@@ -38,31 +46,48 @@ body .container .form button {
   border-radius: 5px;
   color: #fff;
   font-size: medium;
+  width: 180px;
 }
 
-body .container .form button:hover {
+body .container .form .submit-button button:hover {
   background-color: #213750;
 }
 
-body .container .form input {
+body .container .form input,
+body .container .form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   outline: none;
-  width: 120px;
+  width: 140px;
   padding: 8px;
   margin: 8px;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-body .container .form input:hover,
-body .container .form input:focus {
+body .container .form input:hover, body .container .form input:focus,
+body .container .form select:hover,
+body .container .form select:focus {
   background-color: #c1e5f6;
+}
+
+body .recommend-table {
+  height: 250px;
+  width: 800px;
+  padding: 40px;
+  border-radius: 15px;
+  background-color: #335781;
+}
+
+body .recommend-table span {
+  font-size: large;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
 }
-
 /*# sourceMappingURL=form.css.map */
