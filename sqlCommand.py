@@ -77,7 +77,8 @@ def init_child(file="csv/childCareSystem.csv"):
 
     db.create_table("childCareSystem")
     data = read_csv(file)
-    SQL = "INSERT INTO `childCareSystem` (name, type, city, district, address, longitude, latitude, capacity) VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
+    SQL = "INSERT INTO `childCareSystem` (name, type, city, district, address, longitude, latitude, capacity, evaluate_year, evaluation_type, evaluation_result)\
+           VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     db.insert_value(SQL, data)
 
 
@@ -90,6 +91,16 @@ def init_child_demand(file="csv/predict_child.csv"):
         year_102, year_103, year_104, year_105, year_106, year_107, year_108, year_109, 
         year_110, year_111, year_112, year_113, year_114, year_115, year_116, year_117, year_118) 
         VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+    db.insert_value(SQL, data)
+
+
+def init_elderly(file="csv/elderlyCareSystem.csv"):
+    global db
+
+    db.create_table("elderlyCareSystem")
+    data = read_csv(file)
+    SQL = "INSERT INTO `elderlyCareSystem` (name, level, type, city, district, address, longitude, latitude)\
+           VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
     db.insert_value(SQL, data)
 
 
@@ -110,6 +121,8 @@ if __name__ == "__main__":
 
     db = MySQL()
     db.create_table("childMessage")
+    db.create_table("elderlyMessage")
     init_child()
+    init_elderly()
     init_child_demand()
     init_elderly_demand()
