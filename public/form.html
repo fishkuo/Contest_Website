@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Form</title>
+        <title>公托評價系統</title>
         <link rel="stylesheet" href="css/form.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
@@ -48,10 +48,16 @@
                     <label for="rating">評分：</label>
                     <input type="number" placeholder="請輸入評分(1~10)" name="rating" min="1" max="10" />
                 </div>
-                <button type="submit">送出評分</button>
+                <div class="submit-button">
+                    <button type="submit">送出評分</button>
+                </div>
+               
             </form>
         </div>
-        <div><table id="recommend" border="1"></table></div>
+       <div class="recommend-table">
+        <table id="recommend" border="1"><span>本市評分最高的五所幼兒園</span></table>
+       </div>
+
         <script>
             function buildHtmlTable(selector, myList) {
                 var columns = addAllColumnHeaders(myList, selector);
