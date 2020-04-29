@@ -1,54 +1,62 @@
 body {
-	margin: 0;
-	padding: 0;
-	background-color: #335781;
-	color: #ffffff;
-	.container {
-		padding: 40px;
-		border-radius: 15px;
-		background-color: #789ac1;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		.form {
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			font-size: large;
-			button {
-				background-color: #335781;
-				border: none;
-				padding: 10px;
-				margin: 30px 8px 0px 8px;
-				border-radius: 5px;
-				color: #fff;
-				font-size: medium;
-				&:hover {
-					background-color: #213750;
-				}
-			}
-			input,
-			select {
-				-webkit-appearance: none;
-				-moz-appearance: none;
-				appearance: none; /* Remove default arrow */
-				border: none;
-				outline: none;
-				width: 120px;
-				padding: 8px;
-				margin: 8px;
-				border-radius: 5px;
-				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-				&:hover,
-				&:focus {
-					background-color: #c1e5f6;
-				}
-			}
-		}
-	}
+    margin: 0;
+    padding: 0;
+    background-color: #335781;
+    color: #ffffff;
+
+    .container {
+        padding: 40px;
+        border-radius: 15px;
+        background-color: #789ac1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: large;
+
+            button {
+                background-color: #335781;
+                border: none;
+                padding: 10px;
+                margin: 30px 8px 0px 8px;
+                border-radius: 5px;
+                color: #fff;
+                font-size: medium;
+
+                &:hover {
+                    background-color: #213750;
+                }
+            }
+
+            input,
+            select {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                /* Remove default arrow */
+                border: none;
+                outline: none;
+                width: 120px;
+                padding: 8px;
+                margin: 8px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+                &:hover,
+                &:focus {
+                    background-color: #c1e5f6;
+                }
+            }
+        }
+    }
 }
+
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-	opacity: 1;
+    opacity: 1;
 }

@@ -8,11 +8,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body .reference {
@@ -30,8 +30,8 @@ body .container .h1 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   color: black;
   font-size: larger;
   text-shadow: white 0.05em 0.05em 0.08em;
@@ -42,8 +42,8 @@ body .container .house {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 30px;
 }
 
@@ -57,8 +57,8 @@ body .container .people {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 30px;
 }
 
@@ -67,8 +67,8 @@ body .container .button {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding-top: 50px;
 }
 
@@ -83,7 +83,7 @@ body .container .button button {
   font-size: larger;
   border-radius: 22px;
   -webkit-box-shadow: black 0.05em 0.05em 0.08em;
-          box-shadow: black 0.05em 0.05em 0.08em;
+  box-shadow: black 0.05em 0.05em 0.08em;
 }
 
 body .container .button button a {
@@ -95,4 +95,5 @@ body .container .button button:hover {
   background-color: #c1e5f6;
   color: black;
 }
+
 /*# sourceMappingURL=index.css.map */
