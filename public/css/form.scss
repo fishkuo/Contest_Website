@@ -28,7 +28,11 @@ body {
 					background-color: #213750;
 				}
 			}
-			input {
+			input,
+			select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none; /* Remove default arrow */
 				border: none;
 				outline: none;
 				width: 120px;
