@@ -71,7 +71,7 @@ app.get("/get_reviews", (req, res) => {
 
 app.get("/get_city", (req, res) => {
     const QUERY_STRING =
-        "SELECT name, type, address, capacity, rating_amount, rating_average \
+        "SELECT name, type, address, rating_average \
          FROM childCareSystem WHERE city = ? ORDER BY rating_average DESC LIMIT 5;";
 
     getConnection().query(QUERY_STRING, [req.query.city], (err, result, field) => {
