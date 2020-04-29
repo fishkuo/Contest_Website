@@ -58,8 +58,9 @@ app.post("/add_review", (req, res) => {
 });
 
 app.get("/get_reviews", (req, res) => {
-    const QUERY_STRING = "SELECT id, name, rating_amount, rating_score, rating_average FROM childCareSystem";
-    getConnection().query(QUERY_STRING, (err, result, field) => {
+    const QUERY_STRING = "SELECT id, name, rating_amount, rating_score, rating_average FROM childCareSystem \
+    WHERE city = ?";
+    getConnection().query(QUERY_STRING, [req.query.city], (err, result, field) => {
         if (err) {
             console.log("Query Failed: ", err);
             res.sendStatus(500);
