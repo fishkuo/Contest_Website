@@ -116,6 +116,24 @@ def init_elderly_demand(file="csv/predict_old.csv"):
     db.insert_value(SQL, data)
 
 
+def init_powerbi(child="csv/powerbi_child.csv", elderly="csv/powerbi_elderly.csv"):
+    global db
+
+    db.create_table("powerbi_child")
+    db.create_table("powerbi_elderly")
+
+    childData = read_csv(child)
+    elderlyData = read_csv(elderly)
+
+    CHILDSQL = """INSERT INTO `powerbi_child` (county, city, district, town_id, longitude, latitude, year, predict) 
+                  VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"""
+    ELDERLYSQL = """INSERT INTO `powerbi_elderly` (county, city, district, town_id, longitude, latitude, year, predict) 
+                  VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"""
+
+    db.insert_value(CHILDSQL, childData)
+    db.insert_value(ELDERLYSQL, elderlyData)
+
+
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
 
@@ -126,3 +144,5 @@ if __name__ == "__main__":
     init_elderly()
     init_child_demand()
     init_elderly_demand()
+    init_powerbi()
+    print("SQL Completed !")
