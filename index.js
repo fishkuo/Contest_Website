@@ -3,11 +3,13 @@ const path = require("path");
 const mysql = require("mysql");
 const express = require("express");
 const bodyParser = require("body-parser");
+const favicon = require("express-favicon");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(favicon(__dirname + "/public/image/favicon.ico"));
 
 var content = fs.readFileSync("user.json").toString("utf8");
 var { user, password } = JSON.parse(content);
