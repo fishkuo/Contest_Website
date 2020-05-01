@@ -4,7 +4,13 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #335781;
+  background: url(image/elder.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(58, 45, 4, 0.6)), to(rgba(0, 0, 0, 0.7)));
+  background: url(image/elder.jpg), linear-gradient(rgba(58, 45, 4, 0.6), rgba(0, 0, 0, 0.7));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,18 +21,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 body .container {
   height: 250px;
   padding: 40px;
   border-radius: 15px;
-  background-color: #789ac1;
 }
 
 body .container .form {
   width: 250px;
-  font-size: large;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 body .container .form .submit-button {
@@ -39,18 +47,33 @@ body .container .form .submit-button {
 }
 
 body .container .form .submit-button button {
-  background-color: #335781;
-  border: none;
-  padding: 10px;
-  margin: 30px 8px 0px 8px;
-  border-radius: 5px;
-  color: #fff;
-  font-size: medium;
-  width: 180px;
+  margin: 20px;
+  height: 40px;
+  width: 110px;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 body .container .form .submit-button button:hover {
-  background-color: #213750;
+  color: #fff06c;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+body .container .form .submit-button button:hover a {
+  color: #fff06c;
+}
+
+body .container .form .submit-button button a {
+  text-decoration: none;
+  color: white;
 }
 
 body .container .form input,
@@ -60,10 +83,14 @@ body .container .form select {
   appearance: none;
   border: none;
   outline: none;
-  width: 140px;
+  width: 160px;
   padding: 8px;
   margin: 8px;
   border-radius: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.25);
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -71,23 +98,55 @@ body .container .form select {
 body .container .form input:hover, body .container .form input:focus,
 body .container .form select:hover,
 body .container .form select:focus {
-  background-color: #c1e5f6;
+  background-color: rgba(255, 215, 0, 0.3);
 }
 
 body .recommend-table {
-  height: 250px;
-  width: 800px;
-  padding: 40px;
-  border-radius: 15px;
-  background-color: #335781;
+  height: 500px;
+  width: 950px;
 }
 
-body .recommend-table span {
-  font-size: large;
+body .recommend-table .table-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  opacity: 1;
+body .rating ::-webkit-input-placeholder {
+  color: white;
+  font-weight: 300;
+}
+
+body .rating :-ms-input-placeholder {
+  color: white;
+  font-weight: 300;
+}
+
+body .rating ::-ms-input-placeholder {
+  color: white;
+  font-weight: 300;
+}
+
+body .rating ::placeholder {
+  color: white;
+  font-weight: 300;
+}
+
+body table {
+  border-collapse: collapse;
+}
+
+body table th,
+body table td {
+  font-size: 18px;
+  border: 0.05px solid #cacaca;
+  padding: 8px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  opacity: 0.5;
+}
+
+body > div.container > form > div.rating > input[type=number] {
+  width: 145px;
 }
 /*# sourceMappingURL=form.css.map */

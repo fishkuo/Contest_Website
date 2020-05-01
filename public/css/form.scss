@@ -4,33 +4,50 @@ body {
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
-	background-color: #335781;
+	background: url(image/elder.jpg), linear-gradient(rgba(58, 45, 4, 0.6), rgba(0, 0, 0, 0.7));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: overlay;
+	font-family: Arial, Helvetica, sans-serif;
 	color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 20px;
+	font-weight: 300;
+
 	.container {
 		height: 250px;
 		padding: 40px;
 		border-radius: 15px;
-		background-color: #789ac1;
 		.form {
 			width: 250px;
-			font-size: large;
+			font-size: 20px;
+			font-weight: 300;
 			.submit-button {
 				display: flex;
 				justify-content: center;
 				button {
-					background-color: #335781;
-					border: none;
-					padding: 10px;
-					margin: 30px 8px 0px 8px;
-					border-radius: 5px;
-					color: #fff;
-					font-size: medium;
-					width: 180px;
+					margin: 20px;
+					height: 40px;
+					width: 110px;
+					background-color: transparent;
+					color: white;
+					font-size: 18px;
+					border-radius: 3px;
+					border: 1px solid;
+					transition: transform 0.4s;
 					&:hover {
-						background-color: #213750;
+						color: rgb(255, 240, 108);
+						a {
+							color: rgb(255, 240, 108);
+						}
+						transform: scale(1.02);
+					}
+					a {
+						text-decoration: none;
+						color: white;
 					}
 				}
 			}
@@ -42,33 +59,52 @@ body {
 				appearance: none;
 				border: none;
 				outline: none;
-				width: 140px;
+				width: 160px;
 				padding: 8px;
 				margin: 8px;
 				border-radius: 5px;
+				font-size: 15px;
+				font-weight: 300;
+				color: white;
+				background-color: rgba(255, 255, 255, 0.25);
 				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
 				&:hover,
 				&:focus {
-					background-color: #c1e5f6;
+					background-color: rgba(255, 215, 0, 0.3);
 				}
 			}
 		}
 	}
 	.recommend-table {
-		height: 250px;
-		width: 800px;
-		padding: 40px;
-		border-radius: 15px;
-		background-color: #335781;
-		span {
-			font-size: large;
+		height: 500px;
+		width: 950px;
+		.table-header {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+	}
+	.rating {
+		::placeholder {
+			color: white;
+			font-weight: 300;
+		}
+	}
+	table {
+		border-collapse: collapse;
+		th,
+		td {
+			font-size: 18px;
+			border: 0.05px solid rgb(202, 202, 202);
+			padding: 8px;
 		}
 	}
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-	opacity: 1;
-	// display: none;
+input[type=number]::-webkit-inner-spin-button {
+	opacity: 0.5;
+}
+
+body > div.container > form > div.rating > input[type=number] {
+	width: 145px;
 }

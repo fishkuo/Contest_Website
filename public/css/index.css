@@ -3,7 +3,47 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #789ac1;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .navbar {
+  position: fixed;
+  right: 0;
+  margin-right: 50px;
+}
+
+body .navbar ul {
+  list-style-type: none;
+  margin-top: 30px;
+}
+
+body .navbar ul li {
+  margin: 15px;
+  float: left;
+}
+
+body .navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+body .navbar ul li a:hover {
+  text-shadow: -0.3px 0 grey, 0 0.3px grey, 0.3px 0 grey, 0 -0.3px grey;
+}
+
+body .container {
+  background: url(image/elder.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(102, 82, 18, 0.4)), to(rgba(0, 0, 0, 0.5)));
+  background: url(image/elder.jpg), linear-gradient(rgba(102, 82, 18, 0.4), rgba(0, 0, 0, 0.5));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #fff;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13,87 +53,80 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-body .reference {
-  display: none;
+body .container h1 {
+  font-size: 50px;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
-body .container {
-  width: 800px;
-  height: 600px;
+body .container h2 {
+  margin-top: -20px;
+  font-size: 30px;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
 }
 
-body .container .h1 {
-  padding-top: 30px;
+body .button-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: black;
-  font-size: larger;
-  text-shadow: white 0.05em 0.05em 0.08em;
 }
 
-body .container .house {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 30px;
-}
-
-body .container .house img {
-  width: 15%;
-  height: auto;
-}
-
-body .container .people {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 30px;
-}
-
-body .container .button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 50px;
-}
-
-body .container .button button {
-  margin-left: 30px;
-  margin-right: 30px;
-  border: none;
+body .button-container button {
+  margin: 20px;
+  height: 40px;
+  width: 110px;
+  background-color: transparent;
   color: white;
-  background-color: #335781;
-  width: 130px;
-  height: 45px;
-  font-size: larger;
-  border-radius: 22px;
-  -webkit-box-shadow: black 0.05em 0.05em 0.08em;
-          box-shadow: black 0.05em 0.05em 0.08em;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 1px solid;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-body .container .button button a {
+body .button-container button:hover {
+  color: #fff06c;
+  border: 2px solid;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+body .button-container button:hover a {
+  color: #fff06c;
+}
+
+body .button-container button a {
   text-decoration: none;
   color: white;
 }
 
-body .container .button button:hover {
-  background-color: #c1e5f6;
-  color: black;
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=index.css.map */
