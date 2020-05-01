@@ -38,6 +38,12 @@
                         <option value="澎湖縣">澎湖縣</option>
                     </select>
                 </div>
+                <div class="district">
+                    <label for="district">鄉鎮市區：</label>
+                    <select name="district" id="district_menu">
+                        <option value="請選擇">請選擇鄉鎮市區</option>
+                    </select>
+                </div>
                 <div class="fac-name">
                     <label for="fac-name">名稱：</label>
                     <select name="name" id="id_menu">
@@ -51,14 +57,13 @@
                 <div class="submit-button">
                     <button type="submit">送出評分</button>
                 </div>
-               
             </form>
         </div>
-       <div class="recommend-table">
-        <table id="recommend" border="1">
-            <div class="table-header">本市評分最高的五所幼兒園</div>
-        </table>
-       </div>
+        <div class="recommend-table">
+            <table id="recommend" border="1">
+                <div class="table-header">本市評分最高的五所幼兒園</div>
+            </table>
+        </div>
 
         <script>
             function buildHtmlTable(selector, myList) {
