@@ -9,16 +9,16 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.post("/add_review", (req, res) => {
-    var content = fs.readFileSync("user.json").toString("utf8");
-    var { user, password } = JSON.parse(content);
-    var pool = mysql.createPool({
-        host: "db.cbgo4t4xbjoi.ap-southeast-1.rds.amazonaws.com",
-        user: user,
-        password: password,
-        database: "db",
-    });
+var content = fs.readFileSync("user.json").toString("utf8");
+var { user, password } = JSON.parse(content);
+const pool = mysql.createPool({
+    host: "db.cbgo4t4xbjoi.ap-southeast-1.rds.amazonaws.com",
+    user: user,
+    password: password,
+    database: "db",
+});
 
+app.post("/add_review", (req, res) => {
     var date_ob = new Date();
     var id = req.body.name;
     var rating = parseInt(req.body.rating);
@@ -58,15 +58,6 @@ app.post("/add_review", (req, res) => {
 });
 
 app.get("/get_reviews", (req, res) => {
-    var content = fs.readFileSync("user.json").toString("utf8");
-    var { user, password } = JSON.parse(content);
-    var pool = mysql.createPool({
-        host: "db.cbgo4t4xbjoi.ap-southeast-1.rds.amazonaws.com",
-        user: user,
-        password: password,
-        database: "db",
-    });
-
     const QUERY_STRING = `SELECT id, name, rating_amount, rating_score, rating_average FROM childCareSystem \
     WHERE city = "${req.query.city}"`;
     pool.getConnection(function (err, connection) {
@@ -83,15 +74,6 @@ app.get("/get_reviews", (req, res) => {
 });
 
 app.get("/get_city", (req, res) => {
-    var content = fs.readFileSync("user.json").toString("utf8");
-    var { user, password } = JSON.parse(content);
-    var pool = mysql.createPool({
-        host: "db.cbgo4t4xbjoi.ap-southeast-1.rds.amazonaws.com",
-        user: user,
-        password: password,
-        database: "db",
-    });
-
     const QUERY_STRING = `SELECT name, type, address, rating_average \
          FROM childCareSystem WHERE city = "${req.query.city}" ORDER BY rating_average DESC LIMIT 5;`;
     pool.getConnection(function (err, connection) {
