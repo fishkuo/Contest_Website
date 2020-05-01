@@ -95,12 +95,6 @@ body .container .form select {
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-body .container .form input:hover, body .container .form input:focus,
-body .container .form select:hover,
-body .container .form select:focus {
-  background-color: rgba(255, 215, 0, 0.3);
-}
-
 body .recommend-table {
   height: 500px;
   width: 950px;
@@ -138,7 +132,7 @@ body table {
 body table th,
 body table td {
   font-size: 18px;
-  border: 0.05px solid #cacaca;
+  border: 1px solid #cacaca;
   padding: 8px;
 }
 

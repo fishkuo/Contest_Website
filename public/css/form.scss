@@ -71,7 +71,7 @@ body {
 
 				&:hover,
 				&:focus {
-					background-color: rgba(255, 215, 0, 0.3);
+					// background-color: rgba(255, 215, 0, 0.3);
 				}
 			}
 		}
@@ -95,7 +95,7 @@ body {
 		th,
 		td {
 			font-size: 18px;
-			border: 0.05px solid rgb(202, 202, 202);
+			border: 1px solid rgb(202, 202, 202);
 			padding: 8px;
 		}
 	}
