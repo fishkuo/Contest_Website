@@ -7,8 +7,8 @@ city.addEventListener("change", function () {
         .then((response) => response.json())
         .then((json) => {
             var districtList = json[this.value];
-            while (id.options.length > 0) {
-                id.options.remove(0);
+            while (district.options.length > 0) {
+                district.options.remove(0);
             }
 
             Array.from(districtList).forEach(function (element) {

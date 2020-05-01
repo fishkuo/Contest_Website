@@ -99,11 +99,12 @@
             }
 
             var city = document.getElementById("city_menu");
-            city.addEventListener("change", function () {
+            var district = document.getElementById("district_menu");
+            district.addEventListener("change", function () {
                 $(document).ready(function () {
                     var Table = document.getElementById("recommend");
                     Table.innerHTML = "";
-                    $.get("/get_city?city=" + city.value, function (data, status) {
+                    $.get("/get_district?city=" + city.value + "&district=" + district.value, function (data, status) {
                         buildHtmlTable("#recommend", data);
                     });
                 });

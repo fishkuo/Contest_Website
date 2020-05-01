@@ -91,4 +91,20 @@ app.get("/get_city", (req, res) => {
     });
 });
 
+app.get("/get_district", (req, res) => {
+    const QUERY_STRING = `SELECT name, type, address, rating_average \
+         FROM childCareSystem WHERE city = "${req.query.city}" AND district = "${req.query.district}" ORDER BY rating_average DESC LIMIT 5;`;
+    pool.getConnection(function (err, connection) {
+        connection.query(QUERY_STRING, function (error, result, fields) {
+            if (error) {
+                console.log("Query Failed: ", error);
+                res.sendStatus(500);
+                return;
+            }
+            res.send(result);
+            connection.release();
+        });
+    });
+});
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
