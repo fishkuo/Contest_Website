@@ -23,6 +23,8 @@ const pool = mysql.createPool({
 app.post("/add_review", (req, res) => {
     var date_ob = new Date();
     var id = req.body.name;
+    var city = req.body.city;
+    var district = req.body.district;
     var rating = parseInt(req.body.rating);
     var date =
         date_ob.getFullYear() +
@@ -55,7 +57,7 @@ app.post("/add_review", (req, res) => {
             connection.release();
         });
     });
-    res.redirect("/table.html");
+    res.redirect("/table.html?city="+city+"&district="+district);
     res.end();
 });
 
@@ -93,7 +95,7 @@ app.get("/get_city", (req, res) => {
 
 app.get("/get_district", (req, res) => {
     const QUERY_STRING = `SELECT name, type, address, evaluation_result, rating_average, google_rating \
-         FROM childCareSystem WHERE city = "${req.query.city}" AND district = "${req.query.district}" ORDER BY rating_average DESC LIMIT 5;`;
+         FROM childCareSystem WHERE city = "${req.query.city}" AND district = "${req.query.district}" ORDER BY rating_average DESC LIMIT ${req.query.limit};`;
     pool.getConnection(function (err, connection) {
         connection.query(QUERY_STRING, function (error, result, fields) {
             if (error) {

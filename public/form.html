@@ -115,7 +115,7 @@
                 $(document).ready(function () {
                     var Table = document.getElementById("recommend");
                     Table.innerHTML = "";
-                    $.get("/get_district?city=" + city.value + "&district=" + district.value, function (data, status) {
+                    $.get("/get_district?city=" + city.value + "&district=" + district.value + "&limit=5", function (data, status) {
                         buildHtmlTable("#recommend", data);
                     });
                 });
