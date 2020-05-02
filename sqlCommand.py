@@ -101,8 +101,9 @@ def init_elderly(file="csv/elderlyCareSystem.csv"):
 
     db.create_table("elderlyCareSystem")
     data = read_csv(file)
-    SQL = "INSERT INTO `elderlyCareSystem` (name, level, type, city, district, address, longitude, latitude)\
-           VALUES(%s, %s, %s, %s, %s, %s, %s, %s)"
+    SQL = "INSERT INTO `elderlyCareSystem` (name, level, type, city, district, address,\
+           longitude, latitude, rating_amount, rating_score, rating_average, google_rating)\
+           VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     db.insert_value(SQL, data)
 
 
@@ -143,8 +144,8 @@ if __name__ == "__main__":
     db.create_table("childMessage")
     db.create_table("elderlyMessage")
     init_child()
-    # init_elderly()
-    # init_child_demand()
-    # init_elderly_demand()
+    init_elderly()
+    init_child_demand()
+    init_elderly_demand()
     # init_powerbi()
     print("SQL Completed !")

@@ -57,7 +57,7 @@ app.post("/add_review", (req, res) => {
             connection.release();
         });
     });
-    res.redirect("/table.html?city="+city+"&district="+district);
+    res.redirect("/table.html?city=" + city + "&district=" + district);
     res.end();
 });
 
@@ -96,6 +96,22 @@ app.get("/get_city", (req, res) => {
 app.get("/get_district", (req, res) => {
     const QUERY_STRING = `SELECT name, type, address, evaluation_result, rating_average, google_rating \
          FROM childCareSystem WHERE city = "${req.query.city}" AND district = "${req.query.district}" ORDER BY rating_average DESC LIMIT ${req.query.limit};`;
+    pool.getConnection(function (err, connection) {
+        connection.query(QUERY_STRING, function (error, result, fields) {
+            if (error) {
+                console.log("Query Failed: ", error);
+                res.sendStatus(500);
+                return;
+            }
+            res.send(result);
+            connection.release();
+        });
+    });
+});
+
+app.get("/elderly_district", (req, res) => {
+    const QUERY_STRING = `SELECT name, type, address, evaluation_result, rating_average, google_rating \
+         FROM elderlyCareSystem WHERE city = "${req.query.city}" AND district = "${req.query.district}" ORDER BY rating_average DESC LIMIT ${req.query.limit};`;
     pool.getConnection(function (err, connection) {
         connection.query(QUERY_STRING, function (error, result, fields) {
             if (error) {
