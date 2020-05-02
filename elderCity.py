@@ -6,7 +6,7 @@ import sys
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding="utf-8")
 
-    df = pd.read_csv("csv\\childCareSystem.csv", encoding="ANSI")
+    df = pd.read_csv("csv\\elderlyCareSystem.csv", encoding="ANSI")
 
     city2district = {i: ["請選擇鄉鎮市區"] for i in df["city"]}
     for city, dist in zip(df["city"], df["district"]):
@@ -22,10 +22,10 @@ if __name__ == "__main__":
         else:
             district2system[city][dist].append(name)
 
-    with open("public\\childCity.json", "w+", encoding="utf-8") as jsonFile:
+    with open("public\\elderCity.json", "w+", encoding="utf-8") as jsonFile:
         json.dump(city2district, jsonFile, indent=4, ensure_ascii=False)
 
-    with open("public\\childDistrict.json", "w+", encoding="utf-8") as jsonFile:
+    with open("public\\elderDistrict.json", "w+", encoding="utf-8") as jsonFile:
         json.dump(district2system, jsonFile, indent=4, ensure_ascii=False)
 
     print("Done")
