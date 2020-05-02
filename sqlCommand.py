@@ -147,5 +147,5 @@ if __name__ == "__main__":
     init_elderly()
     init_child_demand()
     init_elderly_demand()
-    # init_powerbi()
+    init_powerbi()
     print("SQL Completed !")

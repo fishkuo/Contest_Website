@@ -11,6 +11,12 @@ city.addEventListener("change", function () {
                 district.options.remove(0);
             }
 
+            while (id.options.length > 0) {
+                id.options.remove(0);
+            }
+            let option = new Option("請選擇機構名稱", "請選擇");
+            id.appendChild(option);
+
             Array.from(districtList).forEach(function (element) {
                 var option = new Option(element, element);
                 district.appendChild(option);
@@ -26,6 +32,12 @@ district.addEventListener("change", function () {
             while (id.options.length > 0) {
                 id.options.remove(0);
             }
+
+            while (id.options.length > 0) {
+                id.options.remove(0);
+            }
+            let option = new Option("請選擇機構名稱", "請選擇");
+            id.appendChild(option);
 
             Array.from(selected).forEach(function (element) {
                 var option = new Option(element, element);
