@@ -34,4 +34,35 @@ body .navbar-bg a:hover {
           transform: scale(1.03);
   border-radius: 3px;
 }
-/*# sourceMappingURL=child_map.css.map */
+
+body .field {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.329);
+}
+
+body .recommend-table {
+  padding-bottom: 100px;
+  margin-top: 50px;
+}
+
+body .recommend-table h3 {
+  font-size: 1.2rem;
+}
+
+body .recommend-table hr {
+  visibility: hidden;
+}
+
+body .recommend-table table {
+  background-color: rgba(0, 0, 0, 0.329);
+  color: white;
+}
+
+body .recommend-table table th {
+  color: white;
+}
+
+body > div:nth-child(2) > form > div:nth-child(4) > input {
+  width: 200px;
+}
+/*# sourceMappingURL=child_form.css.map */

@@ -1,0 +1,29 @@
+@import "mainTheme";
+
+body {
+	.field {
+		margin-top: 100px;
+		background-color: rgba(0, 0, 0, 0.329);
+	}
+	.recommend-table {
+		padding-bottom: 100px;
+		margin-top: 50px;
+		h3 {
+			font-size: 1.2rem;
+		}
+		hr {
+			visibility: hidden;
+		}
+		table {
+			background-color: rgba(0, 0, 0, 0.329);
+			color: white;
+			th {
+				color: white;
+			}
+		}
+	}
+}
+
+body > div:nth-child(2) > form > div:nth-child(4) > input {
+	width: 200px;
+}

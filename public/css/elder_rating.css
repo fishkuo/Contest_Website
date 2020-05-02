@@ -35,88 +35,79 @@ body .navbar-bg a:hover {
   border-radius: 3px;
 }
 
-.project-title {
+body .table-title h3 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding-top: 5%;
+}
+
+body .hr {
+  visibility: hidden;
+}
+
+body .table-style {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.project-title h1 {
-  padding-top: 150px;
-  color: white;
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
-}
-
-.project-title h2 {
-  color: white;
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
-}
-
-.buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px;
-}
-
-.buttons button {
-  margin: 20px;
-  height: 40px;
-  width: 110px;
+body .table {
+  overflow-x: auto;
+  height: 80%;
   background-color: transparent;
-  color: white;
-  font-size: 18px;
-  border-radius: 3px;
-  border: 1px solid;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-.buttons button:hover {
-  color: #fff06c;
-  border: 2px solid;
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
+body .table td,
+body .table th {
+  border: 0;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.buttons button:hover a {
-  color: #fff06c;
-}
-
-.buttons button a {
+body .table a {
   text-decoration: none;
   color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
+body .table a:hover {
+  color: #b8a058;
+}
+
+@media only screen and (max-width: 768px) {
+  body body {
+    height: 100;
   }
-  to {
-    opacity: 1;
+  body .hr {
+    visibility: visible;
+  }
+  body .table-title h3 {
+    font-size: 1.3rem;
+  }
+  body .table {
+    overflow-x: auto;
+    height: 80%;
+    background-color: transparent;
+  }
+  body .table td,
+  body .table th {
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body .table a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+body > div:nth-child(2) > table {
+  background-color: black;
 }
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=elder-rating.css.map */
