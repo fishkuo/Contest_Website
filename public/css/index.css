@@ -35,8 +35,8 @@ body .navbar ul li a:hover {
 }
 
 body .container {
-  background: url(image/elder.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(102, 82, 18, 0.4)), to(rgba(0, 0, 0, 0.5)));
-  background: url(image/elder.jpg), linear-gradient(rgba(102, 82, 18, 0.4), rgba(0, 0, 0, 0.5));
+  background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(102, 82, 18, 0.4)), to(rgba(0, 0, 0, 0.5)));
+  background: url(image/three_gen.jpg), linear-gradient(rgba(102, 82, 18, 0.4), rgba(0, 0, 0, 0.5));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
