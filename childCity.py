@@ -9,7 +9,7 @@ if __name__ == "__main__":
     df = pd.read_csv("csv\\childCareSystem.csv", encoding="ANSI")
 
     data = {i: [] for i in df["district"]}
-    district = {i: [] for i in df["city"]}
+    district = {i: ["請選擇鄉鎮市區"] for i in df["city"]}
 
     for city, dist in zip(df["city"], df["district"]):
         if dist not in district[city]:
