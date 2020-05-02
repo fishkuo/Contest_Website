@@ -30,7 +30,7 @@
             <option value="臺東縣">臺東縣</option>
             <option value="金門縣">金門縣</option>
             <option value="澎湖縣">澎湖縣</option>
-       </select>
+        </select>
         <table id="review" border="1"></table>
     </body>
 
@@ -39,16 +39,16 @@
             buildPage();
         });
 
-        function buildPage() {                       
+        function buildPage() {
             var list = document.getElementById("cityList");
-            var city = list.value;           
+            var city = list.value;
             $.ajax({
-                url:'/get_reviews?city='+city,
-                type:'GET',
-                success:function(response){
-                    $("#review").empty(); 
+                url: "/get_reviews?city=" + city,
+                type: "GET",
+                success: function (response) {
+                    $("#review").empty();
                     buildHtmlTable("#review", response);
-                }
+                },
             });
         }
 

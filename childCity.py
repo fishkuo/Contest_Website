@@ -19,9 +19,9 @@ if __name__ == "__main__":
         data[dist].append(name)
 
     with open("public\\city.json", "w+", encoding="utf-8") as jsonFile:
-        json.dump(district, jsonFile, ensure_ascii=False)
+        json.dump(district, jsonFile, indent=4, ensure_ascii=False)
 
     with open("public\\district.json", "w+", encoding="utf-8") as jsonFile:
-        json.dump(data, jsonFile, ensure_ascii=False)
+        json.dump(data, jsonFile, indent=4, ensure_ascii=False)
 
     print("Done")
