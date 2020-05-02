@@ -1,146 +1,69 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: url(image/elder.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(58, 45, 4, 0.6)), to(rgba(0, 0, 0, 0.7)));
-  background: url(image/elder.jpg), linear-gradient(rgba(58, 45, 4, 0.6), rgba(0, 0, 0, 0.7));
+  overflow-y: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
+  background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-blend-mode: overlay;
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 20px;
-  font-weight: 300;
 }
 
-body .container {
-  height: 250px;
-  padding: 40px;
-  border-radius: 15px;
-}
-
-body .container .form {
-  width: 250px;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-body .container .form .submit-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body .container .form .submit-button button {
-  margin: 20px;
-  height: 40px;
-  width: 110px;
+body .navbar-bg {
   background-color: transparent;
+  font-size: 20px;
+  margin: 20px;
+}
+
+body .navbar-bg a {
   color: white;
-  font-size: 18px;
-  border-radius: 3px;
-  border: 1px solid;
   -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-body .container .form .submit-button button:hover {
-  color: #fff06c;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-}
-
-body .container .form .submit-button button:hover a {
-  color: #fff06c;
-}
-
-body .container .form .submit-button button a {
-  text-decoration: none;
+body .navbar-bg a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
   color: white;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
-body .container .form input,
-body .container .form select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  outline: none;
-  width: 160px;
-  padding: 8px;
-  margin: 8px;
-  border-radius: 5px;
-  font-size: 15px;
-  font-weight: 300;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.25);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+body .field {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.329);
 }
 
 body .recommend-table {
-  height: 500px;
-  width: 950px;
+  padding-bottom: 100px;
+  margin-top: 50px;
 }
 
-body .recommend-table .table-header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+body .recommend-table h3 {
+  font-size: 1.2rem;
 }
 
-body .rating ::-webkit-input-placeholder {
+body .recommend-table hr {
+  visibility: hidden;
+}
+
+body .recommend-table table {
+  background-color: rgba(0, 0, 0, 0.329);
   color: white;
-  font-weight: 300;
 }
 
-body .rating :-ms-input-placeholder {
+body .recommend-table table th {
   color: white;
-  font-weight: 300;
 }
 
-body .rating ::-ms-input-placeholder {
-  color: white;
-  font-weight: 300;
-}
-
-body .rating ::placeholder {
-  color: white;
-  font-weight: 300;
-}
-
-body table {
-  border-collapse: collapse;
-}
-
-body table th,
-body table td {
-  font-size: 18px;
-  border: 1px solid #cacaca;
-  padding: 8px;
-}
-
-input[type=number]::-webkit-inner-spin-button {
-  opacity: 0.5;
-}
-
-body > div.container > form > div.rating > input[type=number] {
-  width: 145px;
+body > div:nth-child(2) > form > div:nth-child(4) > input {
+  width: 200px;
 }
 /*# sourceMappingURL=form.css.map */
