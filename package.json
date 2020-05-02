@@ -1,32 +1,32 @@
 {
-  "name": "contest_website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index",
-    "dev": "nodemon index"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuchia0221/Contest_Website.git"
-  },
-  "author": "Aaron Chen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yuchia0221/Contest_Website/issues"
-  },
-  "homepage": "https://github.com/yuchia0221/Contest_Website#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "bulma-extensions": "^6.2.7",
-    "express": "^4.17.1",
-    "express-favicon": "^2.0.1",
-    "fs": "0.0.1-security",
-    "mysql": "^2.18.1",
-    "uuid": "^7.0.3"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.3"
-  }
+    "name": "contest_website",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index",
+        "dev": "nodemon index"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yuchia0221/Contest_Website.git"
+    },
+    "author": "Aaron Chen",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yuchia0221/Contest_Website/issues"
+    },
+    "homepage": "https://github.com/yuchia0221/Contest_Website#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "bulma-extensions": "^6.2.7",
+        "express": "^4.17.1",
+        "express-favicon": "^2.0.1",
+        "fs": "0.0.1-security",
+        "mysql": "^2.18.1",
+        "uuid": "^7.0.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
 }

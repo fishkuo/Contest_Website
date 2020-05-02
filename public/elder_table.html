@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>長照機構評價系統</title>
+        <link rel="stylesheet" href="css/form.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <form class="form" action="/add_review" method="POST">
+                <div class="city">
+                    <label for="city">縣市：</label>
+                    <select name="city" id="city_menu">
+                        <option value="請選擇">請選擇縣市</option>
+                        <option value="基隆市">基隆市</option>
+                        <option value="臺北市">臺北市</option>
+                        <option value="新北市">新北市</option>
+                        <option value="桃園市">桃園市</option>
+                        <option value="新竹縣">新竹縣</option>
+                        <option value="新竹市">新竹市</option>
+                        <option value="苗栗縣">苗栗縣</option>
+                        <option value="臺中市">臺中市</option>
+                        <option value="彰化縣">彰化縣</option>
+                        <option value="雲林縣">雲林縣</option>
+                        <option value="南投縣">南投縣</option>
+                        <option value="嘉義縣">嘉義縣</option>
+                        <option value="嘉義市">嘉義市</option>
+                        <option value="臺南市">臺南市</option>
+                        <option value="高雄市">高雄市</option>
+                        <option value="屏東縣">屏東縣</option>
+                        <option value="宜蘭縣">宜蘭縣</option>
+                        <option value="花蓮縣">花蓮縣</option>
+                        <option value="臺東縣">臺東縣</option>
+                        <option value="金門縣">金門縣</option>
+                        <option value="澎湖縣">澎湖縣</option>
+                    </select>
+                </div>
+                <div class="district">
+                    <label for="district">鄉鎮市區：</label>
+                    <select name="district" id="district_menu">
+                        <option value="請選擇">請選擇鄉鎮市區</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="recommend-table">
+            <table id="recommend" border="1">
+                <div class="table-header">本區評分最高的十所長照機構</div>
+            </table>
+        </div>
+
+        <script>
+            function buildHtmlTable(selector, myList) {
+                var columns = addAllColumnHeaders(myList, selector);
+                var headerTr$ = $("<tr/>");
+                var columns_fixed = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
+                for (var i = 0; i < myList.length; i++) {
+                    var row$ = $("<tr/>");
+                    for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+                        var cellValue = myList[i][columns[colIndex]];
+                        if (cellValue == null) cellValue = "";
+                        if (colIndex == 0) {
+                            var index_district = cellValue.indexOf("區");
+                            if (index_district != -1) {
+                                cellValue = cellValue.slice(index_district + 1);
+                            }
+                        }
+                        if (colIndex == 2) cellValue = cellValue.slice(6);
+                        row$.append($("<td/>").html(cellValue));
+                        if (i == 0) {
+                            headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
+                            $(selector).append(headerTr$);
+                        }
+                    }
+
+                    $(selector).append(row$);
+                }
+            }
+
+            function addAllColumnHeaders(myList, selector) {
+                var columnSet = [];
+                var headerTr$ = $("<tr/>");
+                var columns = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
+                for (var i = 0; i < myList.length; i++) {
+                    var rowHash = myList[i];
+                    for (var key in rowHash) {
+                        if ($.inArray(key, columnSet) == -1) {
+                            columnSet.push(key);
+                        }
+                    }
+                }
+
+                return columnSet;
+            }
+
+            function buildPage(city, district) {
+                $.ajax({
+                    url: "/elderly_district?city=" + city + "&district=" + district + "&limit=10",
+                    type: "GET",
+                    success: function (response) {
+                        $("#recommend").empty();
+                        buildHtmlTable("#recommend", response);
+                    },
+                });
+            }
+
+            $(document).ready(function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                const query_city = urlParams.get("city");
+                const query_district = urlParams.get("district");
+                buildPage(query_city, query_district);
+            });
+
+            var city = document.getElementById("city_menu");
+            var district = document.getElementById("district_menu");
+            district.addEventListener("change", function () {
+                buildPage(city.value, district.value);
+            });
+        </script>
+        <script src="dynamic.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+    </body>
+</html>
