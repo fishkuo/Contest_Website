@@ -76,21 +76,20 @@
                         var cellValue = myList[i][columns[colIndex]];
                         if (cellValue == null) cellValue = "";
                         if (colIndex == 0) {
-                            var index_district = cellValue.indexOf('區');
-                            if (index_district != -1 ){
-                                cellValue = cellValue.slice(index_district+1,);
-                            };  
-                        };
-                        if (colIndex == 2) cellValue = cellValue.slice(6,);
+                            var index_district = cellValue.indexOf("區");
+                            if (index_district != -1) {
+                                cellValue = cellValue.slice(index_district + 1);
+                            }
+                        }
+                        if (colIndex == 2) cellValue = cellValue.slice(6);
                         row$.append($("<td/>").html(cellValue));
-                        if(i == 0) {
+                        if (i == 0) {
                             headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
                             $(selector).append(headerTr$);
-                        };
+                        }
                     }
-                    
+
                     $(selector).append(row$);
-                    
                 }
             }
 
@@ -103,7 +102,6 @@
                     for (var key in rowHash) {
                         if ($.inArray(key, columnSet) == -1) {
                             columnSet.push(key);
-
                         }
                     }
                 }
