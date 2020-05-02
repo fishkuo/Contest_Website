@@ -61,39 +61,52 @@
         </div>
         <div class="recommend-table">
             <table id="recommend" border="1">
-                <div class="table-header">本市評分最高的五所幼兒園</div>
+                <div class="table-header">本區評分最高的五所幼兒園</div>
             </table>
         </div>
 
         <script>
             function buildHtmlTable(selector, myList) {
                 var columns = addAllColumnHeaders(myList, selector);
-
+                var headerTr$ = $("<tr/>");
+                var columns_fixed = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
                 for (var i = 0; i < myList.length; i++) {
                     var row$ = $("<tr/>");
                     for (var colIndex = 0; colIndex < columns.length; colIndex++) {
                         var cellValue = myList[i][columns[colIndex]];
                         if (cellValue == null) cellValue = "";
+                        if (colIndex == 0) {
+                            var index_district = cellValue.indexOf('區');
+                            if (index_district != -1 ){
+                                cellValue = cellValue.slice(index_district+1,);
+                            };  
+                        };
+                        if (colIndex == 2) cellValue = cellValue.slice(6,);
                         row$.append($("<td/>").html(cellValue));
+                        if(i == 0) {
+                            headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
+                            $(selector).append(headerTr$);
+                        };
                     }
+                    
                     $(selector).append(row$);
+                    
                 }
             }
 
             function addAllColumnHeaders(myList, selector) {
                 var columnSet = [];
                 var headerTr$ = $("<tr/>");
-
+                var columns = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
                 for (var i = 0; i < myList.length; i++) {
                     var rowHash = myList[i];
                     for (var key in rowHash) {
                         if ($.inArray(key, columnSet) == -1) {
                             columnSet.push(key);
-                            headerTr$.append($("<th/>").html(key));
+
                         }
                     }
                 }
-                $(selector).append(headerTr$);
 
                 return columnSet;
             }
