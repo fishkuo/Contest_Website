@@ -5,83 +5,66 @@ body {
   height: 100vh;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-body .navbar {
-  position: fixed;
-  right: 0;
-  margin-right: 50px;
-}
-
-body .navbar ul {
-  list-style-type: none;
-  margin-top: 30px;
-}
-
-body .navbar ul li {
-  margin: 15px;
-  float: left;
-}
-
-body .navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-body .navbar ul li a:hover {
-  text-shadow: -0.3px 0 grey, 0 0.3px grey, 0.3px 0 grey, 0 -0.3px grey;
-}
-
-body .container {
-  background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(102, 82, 18, 0.4)), to(rgba(0, 0, 0, 0.5)));
-  background: url(image/three_gen.jpg), linear-gradient(rgba(102, 82, 18, 0.4), rgba(0, 0, 0, 0.5));
+  background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
+  background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-blend-mode: overlay;
-  color: #fff;
-  width: 100%;
-  height: 100%;
+}
+
+body .navbar-bg {
+  background-color: transparent;
+  font-size: 20px;
+  margin: 20px;
+}
+
+body .navbar-bg a {
+  color: white;
+}
+
+body .navbar-bg a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+body .project-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-body .container h1 {
-  font-size: 50px;
+body .project-title h1 {
+  padding-top: 150px;
+  color: white;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
 }
 
-body .container h2 {
-  margin-top: -20px;
-  font-size: 30px;
+body .project-title h2 {
+  color: white;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
 }
 
-body .button-container {
+body .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 20px;
 }
 
-body .button-container button {
+body .buttons button {
   margin: 20px;
   height: 40px;
   width: 110px;
@@ -96,18 +79,18 @@ body .button-container button {
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
-body .button-container button:hover {
+body .buttons button:hover {
   color: #fff06c;
   border: 2px solid;
   -webkit-transform: scale(1.08);
           transform: scale(1.08);
 }
 
-body .button-container button:hover a {
+body .buttons button:hover a {
   color: #fff06c;
 }
 
-body .button-container button a {
+body .buttons button a {
   text-decoration: none;
   color: white;
 }

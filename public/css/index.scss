@@ -5,55 +5,41 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	font-family: Arial, Helvetica, sans-serif;
-	.navbar {
-		position: fixed;
-		right: 0;
-		margin-right: 50px;
-		ul {
-			list-style-type: none;
-			margin-top: 30px;
-			li {
-				margin: 15px;
-				float: left;
-				a {
-					color: white;
-					text-decoration: none;
-					font-size: 20px;
-					font-weight: 300;
-					&:hover {
-						// color: rgb(255, 240, 108);
-						text-shadow: -0.3px 0 grey, 0 0.3px grey, 0.3px 0 grey, 0 -0.3px grey;
-					}
-				}
+	background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-blend-mode: overlay;
+	.navbar-bg {
+		background-color: transparent;
+		font-size: 20px;
+		margin: 20px;
+		a {
+			color: white;
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.2);
+				color: white;
 			}
 		}
 	}
-	.container {
-		background: url(image/three_gen.jpg), linear-gradient(rgba(102, 82, 18, 0.4), rgba(0, 0, 0, 0.5));
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		background-blend-mode: overlay;
-		color: #fff;
-		width: 100%;
-		height: 100%;
+	.project-title {
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		flex-direction: column;
 		h1 {
-			font-size: 50px;
+			padding-top: 150px;
+			color: white;
 			animation: fadein 3s;
 		}
 		h2 {
-			margin-top: -20px;
-			font-size: 30px;
+			color: white;
 			animation: fadein 3s;
 		}
 	}
-	.button-container {
+	.buttons {
 		display: flex;
 		justify-content: center;
+		margin: 20px;
 		button {
 			margin: 20px;
 			height: 40px;
