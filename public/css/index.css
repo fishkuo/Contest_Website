@@ -1,121 +1,122 @@
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
-  background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
-  background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: overlay;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(image/three_gen.jpg),
+        -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
+    background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
 }
 
 body .navbar-bg {
-  background-color: transparent;
-  font-size: 20px;
-  margin: 20px;
+    background-color: transparent;
+    font-size: 20px;
+    margin: 20px;
 }
 
 body .navbar-bg a {
-  color: white;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+    color: white;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 body .navbar-bg a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 body .project-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 body .project-title h1 {
-  padding-top: 150px;
-  color: white;
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
+    padding-top: 150px;
+    color: white;
+    -webkit-animation: fadein 3s;
+    animation: fadein 3s;
 }
 
 body .project-title h2 {
-  color: white;
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
+    color: white;
+    -webkit-animation: fadein 3s;
+    animation: fadein 3s;
 }
 
 body .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 20px;
 }
 
 body .buttons button {
-  margin: 20px;
-  height: 40px;
-  width: 110px;
-  background-color: transparent;
-  color: white;
-  font-size: 18px;
-  border-radius: 3px;
-  border: 1px solid;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+    margin: 20px;
+    height: 40px;
+    width: 110px;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 body .buttons button:hover {
-  color: #fff06c;
-  border: 2px solid;
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
+    color: #fff06c;
+    border: 2px solid;
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
 }
 
 body .buttons button:hover a {
-  color: #fff06c;
+    color: #fff06c;
 }
 
 body .buttons button a {
-  text-decoration: none;
-  color: white;
+    text-decoration: none;
+    color: white;
 }
 
 @-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 /*# sourceMappingURL=index.css.map */

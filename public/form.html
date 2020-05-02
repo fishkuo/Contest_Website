@@ -1,175 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>公托評價系統</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
+        <link rel="stylesheet" href="css/form.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>公托評價系統</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <link rel="stylesheet" href="css/form.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-bg" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+                    </a>
 
-<body>
-    <div class="container">
-        <nav class="navbar navbar-bg" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="https://bulma.io">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-                </a>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-                    data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-end">
-                    <a href="index.html" class="navbar-item">
-                        首頁
-                    </a>
-                    <a href="child_map.html" class="navbar-item">
-                        公托地圖
-                    </a>
-                    <a href="form.html" class="navbar-item">
-                        公托評價系統
-                    </a>
-                    <a href="elder_map.html" class="navbar-item">
-                        長照地圖
-                    </a>
-                    <a href="elder_form.html" class="navbar-item">
-                        長照評價系統
+                    <a
+                        role="button"
+                        class="navbar-burger burger"
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </a>
                 </div>
-            </div>
-        </nav>
-    </div>
-    <div class="container">
-        <form class="form field columns" action="/add_review" method="POST">
-            <div class="control column">
-                <div class="select">
-                    <!-- <label for="city">縣市：</label> -->
-                    <select name="city" id="city_menu">
-                        <option value="請選擇">請選擇縣市名稱</option>
-                        <option value="基隆市">基隆市</option>
-                        <option value="臺北市">臺北市</option>
-                        <option value="新北市">新北市</option>
-                        <option value="桃園市">桃園市</option>
-                        <option value="新竹縣">新竹縣</option>
-                        <option value="新竹市">新竹市</option>
-                        <option value="苗栗縣">苗栗縣</option>
-                        <option value="臺中市">臺中市</option>
-                        <option value="彰化縣">彰化縣</option>
-                        <option value="雲林縣">雲林縣</option>
-                        <option value="南投縣">南投縣</option>
-                        <option value="嘉義縣">嘉義縣</option>
-                        <option value="嘉義市">嘉義市</option>
-                        <option value="臺南市">臺南市</option>
-                        <option value="高雄市">高雄市</option>
-                        <option value="屏東縣">屏東縣</option>
-                        <option value="宜蘭縣">宜蘭縣</option>
-                        <option value="花蓮縣">花蓮縣</option>
-                        <option value="臺東縣">臺東縣</option>
-                        <option value="金門縣">金門縣</option>
-                        <option value="澎湖縣">澎湖縣</option>
-                    </select>
-                </div>
-            </div>
-            <div class="control column">
-                <div class="select">
-                    <!-- <label for="district">鄉鎮市區：</label> -->
-                    <select name="district" id="district_menu">
-                        <option value="請選擇">請選擇鄉鎮市區</option>
-                    </select>
-                </div>
-            </div>
-            <div class="control column">
-                <div class="select">
-                    <!-- <label for="fac-name">名稱：</label> -->
-                    <select name="name" id="id_menu">
-                        <option value="請選擇">請選擇機構名稱</option>
-                    </select>
-                </div>
-            </div>
-            <div class="control column">
-                <!-- <label for="rating">評分：</label> -->
-                <input class="input" type="number" placeholder="請輸入評分(0~5)" name="rating" min="0" max="5" />
-            </div>
-            <div class="control column">
-                <button class="button" type="submit">送出評分</button>
-            </div>
-            
-        </form>
-    </div>
-    <div class="container recommend-table">
-        <table class = "table is-bordered is-fullwidth" id="recommend" >
-            <h3>本區評分最高的五所幼兒園：</h3>
-            <hr>
-        </table>
-    </div>
 
-    <script>
-        function buildHtmlTable(selector, myList) {
-            var columns = addAllColumnHeaders(myList, selector);
-            var headerTr$ = $("<tr/>");
-            var columns_fixed = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
-            for (var i = 0; i < myList.length; i++) {
-                var row$ = $("<tr/>");
-                for (var colIndex = 0; colIndex < columns.length; colIndex++) {
-                    var cellValue = myList[i][columns[colIndex]];
-                    if (cellValue == null) cellValue = "";
-                    if (colIndex == 0) {
-                        var index_district = cellValue.indexOf("區");
-                        if (index_district != -1) {
-                            cellValue = cellValue.slice(index_district + 1);
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="index.html" class="navbar-item">
+                            首頁
+                        </a>
+                        <a href="child_map.html" class="navbar-item">
+                            公托地圖
+                        </a>
+                        <a href="form.html" class="navbar-item">
+                            公托評價系統
+                        </a>
+                        <a href="elder_map.html" class="navbar-item">
+                            長照地圖
+                        </a>
+                        <a href="elder_form.html" class="navbar-item">
+                            長照評價系統
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container">
+            <form class="form field columns" action="/add_review" method="POST">
+                <div class="control column">
+                    <div class="select">
+                        <!-- <label for="city">縣市：</label> -->
+                        <select name="city" id="city_menu">
+                            <option value="請選擇">請選擇縣市名稱</option>
+                            <option value="基隆市">基隆市</option>
+                            <option value="臺北市">臺北市</option>
+                            <option value="新北市">新北市</option>
+                            <option value="桃園市">桃園市</option>
+                            <option value="新竹縣">新竹縣</option>
+                            <option value="新竹市">新竹市</option>
+                            <option value="苗栗縣">苗栗縣</option>
+                            <option value="臺中市">臺中市</option>
+                            <option value="彰化縣">彰化縣</option>
+                            <option value="雲林縣">雲林縣</option>
+                            <option value="南投縣">南投縣</option>
+                            <option value="嘉義縣">嘉義縣</option>
+                            <option value="嘉義市">嘉義市</option>
+                            <option value="臺南市">臺南市</option>
+                            <option value="高雄市">高雄市</option>
+                            <option value="屏東縣">屏東縣</option>
+                            <option value="宜蘭縣">宜蘭縣</option>
+                            <option value="花蓮縣">花蓮縣</option>
+                            <option value="臺東縣">臺東縣</option>
+                            <option value="金門縣">金門縣</option>
+                            <option value="澎湖縣">澎湖縣</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control column">
+                    <div class="select">
+                        <!-- <label for="district">鄉鎮市區：</label> -->
+                        <select name="district" id="district_menu">
+                            <option value="請選擇">請選擇鄉鎮市區</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control column">
+                    <div class="select">
+                        <!-- <label for="fac-name">名稱：</label> -->
+                        <select name="name" id="id_menu">
+                            <option value="請選擇">請選擇機構名稱</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control column">
+                    <!-- <label for="rating">評分：</label> -->
+                    <input class="input" type="number" placeholder="請輸入評分(0~5)" name="rating" min="0" max="5" />
+                </div>
+                <div class="control column">
+                    <button class="button" type="submit">送出評分</button>
+                </div>
+            </form>
+        </div>
+        <div class="container recommend-table">
+            <table class="table is-bordered is-fullwidth" id="recommend">
+                <h3>本區評分最高的五所幼兒園：</h3>
+                <hr />
+            </table>
+        </div>
+
+        <script>
+            function buildHtmlTable(selector, myList) {
+                var columns = addAllColumnHeaders(myList, selector);
+                var headerTr$ = $("<tr/>");
+                var columns_fixed = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
+                for (var i = 0; i < myList.length; i++) {
+                    var row$ = $("<tr/>");
+                    for (var colIndex = 0; colIndex < columns.length; colIndex++) {
+                        var cellValue = myList[i][columns[colIndex]];
+                        if (cellValue == null) cellValue = "";
+                        if (colIndex == 0) {
+                            var index_district = cellValue.indexOf("區");
+                            if (index_district != -1) {
+                                cellValue = cellValue.slice(index_district + 1);
+                            }
+                        }
+                        if (colIndex == 2) cellValue = cellValue.slice(6);
+                        row$.append($("<td/>").html(cellValue));
+                        if (i == 0) {
+                            headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
+                            $(selector).append(headerTr$);
                         }
                     }
-                    if (colIndex == 2) cellValue = cellValue.slice(6);
-                    row$.append($("<td/>").html(cellValue));
-                    if (i == 0) {
-                        headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
-                        $(selector).append(headerTr$);
-                    }
-                }
 
-                $(selector).append(row$);
-            }
-        }
-
-        function addAllColumnHeaders(myList, selector) {
-            var columnSet = [];
-            var headerTr$ = $("<tr/>");
-            var columns = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
-            for (var i = 0; i < myList.length; i++) {
-                var rowHash = myList[i];
-                for (var key in rowHash) {
-                    if ($.inArray(key, columnSet) == -1) {
-                        columnSet.push(key);
-                    }
+                    $(selector).append(row$);
                 }
             }
 
-            return columnSet;
-        }
+            function addAllColumnHeaders(myList, selector) {
+                var columnSet = [];
+                var headerTr$ = $("<tr/>");
+                var columns = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
+                for (var i = 0; i < myList.length; i++) {
+                    var rowHash = myList[i];
+                    for (var key in rowHash) {
+                        if ($.inArray(key, columnSet) == -1) {
+                            columnSet.push(key);
+                        }
+                    }
+                }
 
-        var city = document.getElementById("city_menu");
-        var district = document.getElementById("district_menu");
-        district.addEventListener("change", function () {
-            $(document).ready(function () {
-                var Table = document.getElementById("recommend");
-                Table.innerHTML = "";
-                $.get("/get_district?city=" + city.value + "&district=" + district.value + "&limit=5", function (data, status) {
-                    buildHtmlTable("#recommend", data);
+                return columnSet;
+            }
+
+            var city = document.getElementById("city_menu");
+            var district = document.getElementById("district_menu");
+            district.addEventListener("change", function () {
+                $(document).ready(function () {
+                    var Table = document.getElementById("recommend");
+                    Table.innerHTML = "";
+                    $.get("/get_district?city=" + city.value + "&district=" + district.value + "&limit=5", function (
+                        data,
+                        status
+                    ) {
+                        buildHtmlTable("#recommend", data);
+                    });
                 });
             });
-        });
-    </script>
-    <script src="dynamic.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
-</body>
-
+        </script>
+        <script src="dynamic.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+    </body>
 </html>

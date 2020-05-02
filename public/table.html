@@ -44,7 +44,6 @@
                         <option value="請選擇">請選擇鄉鎮市區</option>
                     </select>
                 </div>
-
             </form>
         </div>
         <div class="recommend-table">
@@ -64,21 +63,20 @@
                         var cellValue = myList[i][columns[colIndex]];
                         if (cellValue == null) cellValue = "";
                         if (colIndex == 0) {
-                            var index_district = cellValue.indexOf('區');
-                            if (index_district != -1 ){
-                                cellValue = cellValue.slice(index_district+1,);
-                            };  
-                        };
-                        if (colIndex == 2) cellValue = cellValue.slice(6,);
+                            var index_district = cellValue.indexOf("區");
+                            if (index_district != -1) {
+                                cellValue = cellValue.slice(index_district + 1);
+                            }
+                        }
+                        if (colIndex == 2) cellValue = cellValue.slice(6);
                         row$.append($("<td/>").html(cellValue));
-                        if(i == 0) {
+                        if (i == 0) {
                             headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
                             $(selector).append(headerTr$);
-                        };
+                        }
                     }
-                    
+
                     $(selector).append(row$);
-                    
                 }
             }
 
@@ -91,16 +89,14 @@
                     for (var key in rowHash) {
                         if ($.inArray(key, columnSet) == -1) {
                             columnSet.push(key);
-
                         }
                     }
                 }
 
                 return columnSet;
             }
-            
-            function buildPage(city, district) {
 
+            function buildPage(city, district) {
                 $.ajax({
                     url: "/get_district?city=" + city + "&district=" + district + "&limit=10",
                     type: "GET",
@@ -113,11 +109,11 @@
 
             $(document).ready(function () {
                 const urlParams = new URLSearchParams(window.location.search);
-                const query_city = urlParams.get('city');
-                const query_district = urlParams.get('district');
+                const query_city = urlParams.get("city");
+                const query_district = urlParams.get("district");
                 buildPage(query_city, query_district);
             });
-            
+
             var city = document.getElementById("city_menu");
             var district = document.getElementById("district_menu");
             district.addEventListener("change", function () {

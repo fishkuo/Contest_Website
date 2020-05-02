@@ -1,69 +1,70 @@
 body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  overflow-y: auto;
-  font-family: Arial, Helvetica, sans-serif;
-  background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
-  background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: overlay;
-  color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(image/three_gen.jpg),
+        -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
+    background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: white;
 }
 
 body .navbar-bg {
-  background-color: transparent;
-  font-size: 20px;
-  margin: 20px;
+    background-color: transparent;
+    font-size: 20px;
+    margin: 20px;
 }
 
 body .navbar-bg a {
-  color: white;
-  -webkit-transition: -webkit-transform 0.4s;
-  transition: -webkit-transform 0.4s;
-  transition: transform 0.4s;
-  transition: transform 0.4s, -webkit-transform 0.4s;
+    color: white;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 body .navbar-bg a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-  color: white;
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 body .field {
-  margin-top: 100px;
-  background-color: rgba(0, 0, 0, 0.329);
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.329);
 }
 
 body .recommend-table {
-  padding-bottom: 100px;
-  margin-top: 50px;
+    padding-bottom: 100px;
+    margin-top: 50px;
 }
 
 body .recommend-table h3 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 body .recommend-table hr {
-  visibility: hidden;
+    visibility: hidden;
 }
 
 body .recommend-table table {
-  background-color: rgba(0, 0, 0, 0.329);
-  color: white;
+    background-color: rgba(0, 0, 0, 0.329);
+    color: white;
 }
 
 body .recommend-table table th {
-  color: white;
+    color: white;
 }
 
 body > div:nth-child(2) > form > div:nth-child(4) > input {
-  width: 200px;
+    width: 200px;
 }
 /*# sourceMappingURL=form.css.map */
