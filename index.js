@@ -57,7 +57,7 @@ app.post("/add_child_review", (req, res) => {
             connection.release();
         });
     });
-    res.redirect("/table.html?city=" + city + "&district=" + district);
+    res.redirect("/child_table.html?city=" + city + "&district=" + district);
     res.end();
 });
 
@@ -98,7 +98,7 @@ app.post("/add_elderly_review", (req, res) => {
             connection.release();
         });
     });
-    // res.redirect("/table.html?city=" + city + "&district=" + district);
+    res.redirect("/elder_table.html?city=" + city + "&district=" + district);
     res.end();
 });
 
