@@ -77,8 +77,10 @@ def init_child(file="csv/childCareSystem.csv"):
 
     db.create_table("childCareSystem")
     data = read_csv(file)
-    SQL = "INSERT INTO `childCareSystem` (name, type, city, district, address, longitude, latitude, capacity, evaluate_year, evaluation_type, evaluation_result)\
-           VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    SQL = "INSERT INTO `childCareSystem` (name, type, city, district, address, longitude, latitude,\
+           capacity, evaluate_year, evaluation_type, evaluation_result, \
+           rating_amount, rating_score, rating_average, google_rating)\
+           VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     db.insert_value(SQL, data)
 
 
@@ -141,8 +143,8 @@ if __name__ == "__main__":
     db.create_table("childMessage")
     db.create_table("elderlyMessage")
     init_child()
-    init_elderly()
-    init_child_demand()
-    init_elderly_demand()
-    init_powerbi()
+    # init_elderly()
+    # init_child_demand()
+    # init_elderly_demand()
+    # init_powerbi()
     print("SQL Completed !")
