@@ -1,0 +1,45 @@
+@mixin flexCenter {
+	display: flex;
+	justify-content: center;
+}
+
+.box {
+	background-color: transparent;
+	box-shadow: none;
+}
+
+.table-header {
+	@include flexCenter();
+	background-color: transparent;
+	font-size: 1.4rem;
+	color: white;
+}
+
+.recommend-table {
+	@include flexCenter();
+	background-color: transparent;
+	.table {
+		background-color: rgba(0, 0, 0, 0.329);
+		color: white;
+		th {
+			color: white;
+		}
+	}
+}
+
+.column {
+	@include flexCenter();
+	select,
+	input,
+	button {
+		width: 170px;
+		background-color: rgba(0, 0, 0, 0.329);
+		color: white;
+		&::placeholder {
+			color: white;
+		}
+		&:hover {
+			color: white;
+		}
+	}
+}

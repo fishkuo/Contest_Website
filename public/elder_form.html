@@ -56,13 +56,13 @@
                 </div>
             </nav>
         </div>
-        <div class="container">
-            <form class="form field columns" action="/add_elderly_review" method="POST">
-                <div class="control column">
+        <div class="container box">
+            <form class="form columns" action="/add_elderly_review" method="POST">
+                <div class="column">
                     <div class="select">
                         <!-- <label for="city">縣市：</label> -->
                         <select name="city" id="city_menu">
-                            <option value="請選擇">請選擇縣市名稱</option>
+                            <option value="請選擇">請選擇縣市</option>
                             <option value="基隆市">基隆市</option>
                             <option value="臺北市">臺北市</option>
                             <option value="新北市">新北市</option>
@@ -87,7 +87,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="control column">
+                <div class="column">
                     <div class="select">
                         <!-- <label for="district">鄉鎮市區：</label> -->
                         <select name="district" id="district_menu">
@@ -95,31 +95,34 @@
                         </select>
                     </div>
                 </div>
-                <div class="control column">
+                <div class="column">
                     <div class="select">
                         <!-- <label for="fac-name">名稱：</label> -->
                         <select name="name" id="id_menu">
-                            <option value="請選擇">請選擇機構名稱</option>
+                            <option value="請選擇">請選擇機構</option>
                         </select>
                     </div>
                 </div>
-                <div class="control column">
+                <div class="column">
                     <!-- <label for="rating">評分：</label> -->
                     <input class="input" type="number" placeholder="請輸入評分(0~5)" name="rating" min="0" max="5" />
                 </div>
-                <div class="control column">
+                <div class="column">
                     <button class="button" type="submit">送出評分</button>
                 </div>
             </form>
         </div>
-        <div class="container recommend-table">
-            <table class="table is-bordered is-fullwidth" id="recommend">
+        <div class="container box table-header">
+            <div class="container">
                 <h3>本行政區評分最高的五所長照機構</h3>
-                <hr />
-            </table>
+            </div>
+            <div class="container link"> 
+                <a href="elder_rating.html">(點我查看各市長照機構評鑑結果)</a>
+            </div>
         </div>
-        <div class="container">
-            <a href="elder_rating.html">各市長照機構評鑑結果</a>
+        <div class="container recommend-table">
+            <table class="table is-bordered" id="recommend">
+            </table>
         </div>
         <script>
             function buildHtmlTable(selector, myList) {

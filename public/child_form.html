@@ -40,7 +40,7 @@
                         <a href="child_map.html" class="navbar-item">
                             公托地圖
                         </a>
-                        <a href="form.html" class="navbar-item">
+                        <a href="child_form.html" class="navbar-item">
                             公托評價系統
                         </a>
                         <a href="elder_map.html" class="navbar-item">
@@ -53,13 +53,13 @@
                 </div>
             </nav>
         </div>
-        <div class="container">
-            <form class="form field columns" action="/add_child_review" method="POST">
-                <div class="control column">
+        <div class="container box">
+            <form class="form columns" action="/add_child_review" method="POST">
+                <div class="column">
                     <div class="select">
                         <!-- <label for="city">縣市：</label> -->
                         <select name="city" id="city_menu">
-                            <option value="請選擇">請選擇縣市名稱</option>
+                            <option value="請選擇">請選擇縣市</option>
                             <option value="基隆市">基隆市</option>
                             <option value="臺北市">臺北市</option>
                             <option value="新北市">新北市</option>
@@ -84,7 +84,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="control column">
+                <div class="column">
                     <div class="select">
                         <!-- <label for="district">鄉鎮市區：</label> -->
                         <select name="district" id="district_menu">
@@ -92,30 +92,31 @@
                         </select>
                     </div>
                 </div>
-                <div class="control column">
+                <div class="column">
                     <div class="select">
                         <!-- <label for="fac-name">名稱：</label> -->
                         <select name="name" id="id_menu">
-                            <option value="請選擇">請選擇機構名稱</option>
+                            <option value="請選擇">請選擇機構</option>
                         </select>
                     </div>
                 </div>
-                <div class="control column">
+                <div class="column">
                     <!-- <label for="rating">評分：</label> -->
                     <input class="input" type="number" placeholder="請輸入評分(0~5)" name="rating" min="0" max="5" />
                 </div>
-                <div class="control column">
+                <div class="column">
                     <button class="button" type="submit">送出評分</button>
                 </div>
             </form>
         </div>
-        <div class="container recommend-table">
-            <table class="table is-bordered is-fullwidth" id="recommend">
-                <h3>本行政區評分最高的五所幼兒園</h3>
-                <hr />
-            </table>
+        <div class="container box table-header">
+            <h3>本行政區評分最高的五所幼兒園</h3>
         </div>
-
+        <div class="container recommend-table box">
+            <table class="table is-bordered" id="recommend">
+            </table>
+            
+        </div>
         <script>
             function buildHtmlTable(selector, myList) {
                 var columns = addAllColumnHeaders(myList, selector);

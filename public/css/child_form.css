@@ -35,34 +35,87 @@ body .navbar-bg a:hover {
   border-radius: 3px;
 }
 
-body .field {
-  margin-top: 100px;
-  background-color: rgba(0, 0, 0, 0.329);
+.box {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
-body .recommend-table {
-  padding-bottom: 100px;
-  margin-top: 50px;
+.table-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  font-size: 1.4rem;
+  color: white;
 }
 
-body .recommend-table h3 {
-  font-size: 1.2rem;
+.recommend-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
 }
 
-body .recommend-table hr {
-  visibility: hidden;
-}
-
-body .recommend-table table {
+.recommend-table .table {
   background-color: rgba(0, 0, 0, 0.329);
   color: white;
 }
 
-body .recommend-table table th {
+.recommend-table .table th {
   color: white;
 }
 
-body > div:nth-child(2) > form > div:nth-child(4) > input {
-  width: 200px;
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.column select,
+.column input,
+.column button {
+  width: 170px;
+  background-color: rgba(0, 0, 0, 0.329);
+  color: white;
+}
+
+.column select::-webkit-input-placeholder,
+.column input::-webkit-input-placeholder,
+.column button::-webkit-input-placeholder {
+  color: white;
+}
+
+.column select:-ms-input-placeholder,
+.column input:-ms-input-placeholder,
+.column button:-ms-input-placeholder {
+  color: white;
+}
+
+.column select::-ms-input-placeholder,
+.column input::-ms-input-placeholder,
+.column button::-ms-input-placeholder {
+  color: white;
+}
+
+.column select::placeholder,
+.column input::placeholder,
+.column button::placeholder {
+  color: white;
+}
+
+.column select:hover,
+.column input:hover,
+.column button:hover {
+  color: white;
 }
 /*# sourceMappingURL=child_form.css.map */

@@ -1,11 +1,2 @@
 @import "_mainTheme";
-
-@mixin flexCenter {
-	display: flex;
-	justify-content: center;
-}
-
-.map {
-	@include flexCenter();
-	background-color: transparent;
-}
+@import "_mapTheme";
