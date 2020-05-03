@@ -21,7 +21,23 @@
 	height: 100%;
 }
 
-@media all and (max-width: 480px) {
+.for-mobile {
+	display: none;
+}
+@media all and (max-width: 1000px) {
+	.for-mobile {
+		@include flexCenter();
+		font-size: 2rem;
+		margin-top: 200px;
+		background-color: transparent;
+		a {
+			color: white;
+			&:hover {
+				color: rgba($color:white, $alpha: 0.7);
+			}
+		}
+	}
 	.map {
+		display: none;
 	}
 }
