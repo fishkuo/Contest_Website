@@ -101,7 +101,7 @@
             function buildHtmlTable(selector, myList) {
                 var columns = addAllColumnHeaders(myList, selector);
                 var headerTr$ = $("<tr/>");
-                var columns_fixed = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
+                var columns_fixed = ["名稱", "類型", "地址", "系統評分", "Google Map評分"];;
                 for (var i = 0; i < myList.length; i++) {
                     var row$ = $("<tr/>");
                     for (var colIndex = 0; colIndex < columns.length; colIndex++) {
@@ -114,6 +114,7 @@
                             }
                         }
                         if (colIndex == 2) cellValue = cellValue.slice(6);
+                        if (colIndex == 3) cellValue = Math.round(cellValue*10)/10;
                         row$.append($("<td/>").html(cellValue));
                         if (i == 0) {
                             headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
@@ -128,7 +129,7 @@
             function addAllColumnHeaders(myList, selector) {
                 var columnSet = [];
                 var headerTr$ = $("<tr/>");
-                var columns = ["名稱", "類型", "地址", "評鑑結果", "系統評分", "Google Map評分"];
+                //var columns = ["名稱", "類型", "地址", "系統評分", "Google Map評分"];
                 for (var i = 0; i < myList.length; i++) {
                     var rowHash = myList[i];
                     for (var key in rowHash) {
