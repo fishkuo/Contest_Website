@@ -89,7 +89,7 @@ body .navbar-bg a:hover {
 .column select,
 .column input,
 .column button {
-  width: 160px;
+  width: 220px;
   background-color: rgba(0, 0, 0, 0.329);
   color: white;
 }
@@ -122,6 +122,30 @@ body .navbar-bg a:hover {
 .column input:hover,
 .column button:hover {
   color: white;
+}
+
+@media all and (max-width: 1380px) {
+  .column select,
+  .column input,
+  .column button {
+    width: 170px;
+  }
+}
+
+@media all and (max-width: 1080px) {
+  .column select,
+  .column input,
+  .column button {
+    width: 160px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .column select,
+  .column input,
+  .column button {
+    width: 170px;
+  }
 }
 
 .table-header {

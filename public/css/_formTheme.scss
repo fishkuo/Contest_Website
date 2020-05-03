@@ -32,7 +32,7 @@
 	select,
 	input,
 	button {
-		width: 160px;
+		width: 220px;
 		background-color: rgba(0, 0, 0, 0.329);
 		color: white;
 		&::placeholder {
@@ -40,6 +40,36 @@
 		}
 		&:hover {
 			color: white;
+		}
+	}
+}
+
+@media all and (max-width: 1380px) {
+	.column {
+		select,
+		input,
+		button {
+			width: 170px;
+		}
+	}
+}
+
+@media all and (max-width: 1080px) {
+	.column {
+		select,
+		input,
+		button {
+			width: 160px;
+		}
+	}
+}
+
+@media all and (max-width: 768px) {
+	.column {
+		select,
+		input,
+		button {
+			width: 170px;
 		}
 	}
 }
