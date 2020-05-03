@@ -28,6 +28,7 @@
 }
 
 .column {
+	margin-top: 3%;
 	@include flexCenter();
 	select,
 	input,
@@ -60,6 +61,16 @@
 		input,
 		button {
 			width: 160px;
+		}
+	}
+}
+
+@media all and (max-width: 1023px) {
+	.column {
+		select,
+		input,
+		button {
+			width: 200px;
 		}
 	}
 }

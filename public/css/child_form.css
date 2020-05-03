@@ -78,6 +78,7 @@ body .navbar-bg a:hover {
 }
 
 .column {
+  margin-top: 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,6 +138,14 @@ body .navbar-bg a:hover {
   .column input,
   .column button {
     width: 160px;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .column select,
+  .column input,
+  .column button {
+    width: 200px;
   }
 }
 
