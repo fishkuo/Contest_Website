@@ -28,6 +28,12 @@
 .for-mobile {
 	display: none;
 }
+@media all and (max-width: 1180px) {
+	.map {
+		margin-top: 6%;
+	}
+}
+
 @media all and (max-width: 1000px) {
 	.for-mobile {
 		@include flexCenter();

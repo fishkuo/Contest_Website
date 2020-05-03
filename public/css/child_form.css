@@ -146,5 +146,8 @@ body .navbar-bg a:hover {
   .column button {
     width: 170px;
   }
+  .table-header {
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=child_form.css.map */
