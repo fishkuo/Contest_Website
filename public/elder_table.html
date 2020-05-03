@@ -4,15 +4,58 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>長照機構評價系統</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
         <link rel="stylesheet" href="css/elder_table.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
         <div class="container">
+            <nav class="navbar navbar-bg" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+                    </a>
+
+                    <a
+                        role="button"
+                        class="navbar-burger burger"
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a href="index.html" class="navbar-item">
+                            首頁
+                        </a>
+                        <a href="child_map.html" class="navbar-item">
+                            公托地圖
+                        </a>
+                        <a href="child_form.html" class="navbar-item">
+                            公托評價系統
+                        </a>
+                        <a href="elder_map.html" class="navbar-item">
+                            長照地圖
+                        </a>
+                        <a href="elder_form.html" class="navbar-item">
+                            長照評價系統
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="container box">
             <form class="form" action="/add_review" method="POST">
-                <div class="city">
-                    <label for="city">縣市：</label>
+                <div class="city select">
+                    <!-- <label for="city">縣市：</label> -->
                     <select name="city" id="city_menu">
                         <option value="請選擇">請選擇縣市</option>
                         <option value="基隆市">基隆市</option>
@@ -38,17 +81,19 @@
                         <option value="澎湖縣">澎湖縣</option>
                     </select>
                 </div>
-                <div class="district">
-                    <label for="district">鄉鎮市區：</label>
+                <div class="district select">
+                    <!-- <label for="district">鄉鎮市區：</label> -->
                     <select name="district" id="district_menu">
                         <option value="請選擇">請選擇鄉鎮市區</option>
                     </select>
                 </div>
             </form>
         </div>
+        <div class="container title is-4">
+            <div class="table-header">本區評分最高的十所長照機構</div>
+        </div>
         <div class="recommend-table">
-            <table id="recommend" border="1">
-                <div class="table-header">本區評分最高的十所長照機構</div>
+            <table class="table is-bordered " id="recommend" border="1">
             </table>
         </div>
 

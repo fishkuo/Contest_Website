@@ -34,4 +34,60 @@ body .navbar-bg a:hover {
           transform: scale(1.03);
   border-radius: 3px;
 }
+
+body {
+  overflow: hidden;
+}
+
+.recommend-table,
+form,
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-weight: 400;
+}
+
+.recommend-table table,
+form table,
+.title table {
+  background-color: transparent;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.329);
+}
+
+.box {
+  background-color: transparent;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+table {
+  padding-bottom: 100px;
+}
+
+.table th {
+  color: white;
+}
+
+.select {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.select select {
+  background-color: rgba(0, 0, 0, 0.329);
+  color: white;
+  width: 200px;
+}
 /*# sourceMappingURL=child_table.css.map */
