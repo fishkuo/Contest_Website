@@ -59,6 +59,16 @@
                 <button><a href="elder_map.html">找長照</a></button>
             </div>
         </div>
-        -->
+        <script>
+            (function(){
+                var burger = document.querySelector(".burger");
+                var nav = document.querySelector("#"+burger.dataset.target);
+
+                burger.addEventListener("click",function(){
+                    burger.classList.toggle("is-active")
+                    nav.classList.toggle("is-active")
+                })
+            })();
+        </script>
     </body>
 </html>

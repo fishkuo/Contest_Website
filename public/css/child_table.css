@@ -36,6 +36,10 @@ body .navbar-bg a:hover {
   border-radius: 3.5px;
 }
 
+#navbarBasicExample {
+  background-color: transparent;
+}
+
 .recommend-table,
 form,
 .title {

@@ -36,6 +36,10 @@ body .navbar-bg a:hover {
   border-radius: 3.5px;
 }
 
+#navbarBasicExample {
+  background-color: transparent;
+}
+
 body .table-title h3 {
   color: white;
   font-size: 1.6rem;

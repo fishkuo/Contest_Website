@@ -53,5 +53,16 @@
         <div class="container map">
             <iframe class="responsive-iframe" src="https://msit.powerbi.com/view?r=eyJrIjoiMjNiYzk0MGItMWViYi00YjgyLTg5ZTctMTdjZDE4NDRmNjEzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>
         </div>
+        <script>
+            (function(){
+                var burger = document.querySelector(".burger");
+                var nav = document.querySelector("#"+burger.dataset.target);
+
+                burger.addEventListener("click",function(){
+                    burger.classList.toggle("is-active")
+                    nav.classList.toggle("is-active")
+                })
+            })();
+        </script>
     </body>
 </html>

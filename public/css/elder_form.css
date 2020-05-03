@@ -36,6 +36,10 @@ body .navbar-bg a:hover {
   border-radius: 3.5px;
 }
 
+#navbarBasicExample {
+  background-color: transparent;
+}
+
 .box {
   background-color: transparent;
   -webkit-box-shadow: none;

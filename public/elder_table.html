@@ -167,5 +167,16 @@
         </script>
         <script src="dynamic.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
+        <script>
+            (function(){
+                var burger = document.querySelector(".burger");
+                var nav = document.querySelector("#"+burger.dataset.target);
+
+                burger.addEventListener("click",function(){
+                    burger.classList.toggle("is-active")
+                    nav.classList.toggle("is-active")
+                })
+            })();
+        </script>
     </body>
 </html>
