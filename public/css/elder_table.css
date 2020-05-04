@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@ body {
   height: 100vh;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
   background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
   background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
   background-repeat: no-repeat;
@@ -34,7 +33,7 @@ body .navbar-bg a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   -webkit-transform: scale(1.03);
-  transform: scale(1.03);
+          transform: scale(1.03);
   border-radius: 3.5px;
 }
 
@@ -49,12 +48,12 @@ form,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: transparent;
   color: white;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   font-weight: 400;
 }
 
@@ -64,7 +63,7 @@ form table,
   background-color: transparent;
   color: white;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
   background-color: rgba(0, 0, 0, 0.329);
 }
 
@@ -72,7 +71,7 @@ form table,
   background-color: transparent;
   color: white;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 table {
@@ -96,5 +95,4 @@ table {
   color: white;
   width: 200px;
 }
-
 /*# sourceMappingURL=elder_table.css.map */

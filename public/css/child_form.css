@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@ body {
   height: 100vh;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
   background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
   background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
   background-repeat: no-repeat;
@@ -34,7 +33,7 @@ body .navbar-bg a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   -webkit-transform: scale(1.03);
-  transform: scale(1.03);
+          transform: scale(1.03);
   border-radius: 3.5px;
 }
 
@@ -45,7 +44,7 @@ body .navbar-bg a:hover {
 .box {
   background-color: transparent;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .table-header {
@@ -53,8 +52,8 @@ body .navbar-bg a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: transparent;
   font-size: 1.4rem;
   color: white;
@@ -65,8 +64,8 @@ body .navbar-bg a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: transparent;
 }
 
@@ -85,8 +84,8 @@ body .navbar-bg a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .column select,
@@ -128,7 +127,6 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 1380px) {
-
   .column select,
   .column input,
   .column button {
@@ -137,7 +135,6 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 1080px) {
-
   .column select,
   .column input,
   .column button {
@@ -146,7 +143,6 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 1023px) {
-
   .column select,
   .column input,
   .column button {
@@ -155,16 +151,13 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 768px) {
-
   .column select,
   .column input,
   .column button {
     width: 170px;
   }
-
   .table-header {
     font-size: 1.3rem;
   }
 }
-
 /*# sourceMappingURL=child_form.css.map */

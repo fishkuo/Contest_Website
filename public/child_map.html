@@ -51,22 +51,34 @@
             </nav>
         </div>
         <div class="box for-mobile" target="_blank">
-            <a href="https://msit.powerbi.com/view?r=eyJrIjoiN2I5MGM4NDUtYzZlYy00ODc2LTliZGItOTAwNWZkM2EwMDkzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9">點我看地圖</a>
+            <a
+                href="https://msit.powerbi.com/view?r=eyJrIjoiN2I5MGM4NDUtYzZlYy00ODc2LTliZGItOTAwNWZkM2EwMDkzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9"
+                >點我看地圖</a
+            >
         </div>
         <div class="container map">
-            <iframe class="responsive-iframe" src="https://msit.powerbi.com/view?r=eyJrIjoiN2I5MGM4NDUtYzZlYy00ODc2LTliZGItOTAwNWZkM2EwMDkzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9" frameborder="0" allowFullScreen="true"></iframe>
+            <iframe
+                class="responsive-iframe"
+                src="https://msit.powerbi.com/view?r=eyJrIjoiN2I5MGM4NDUtYzZlYy00ODc2LTliZGItOTAwNWZkM2EwMDkzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9"
+                frameborder="0"
+                allowfullscreen="true"
+            ></iframe>
+        </div>
+        <div id="mobile">
+            <img src="http://impossible.ntu.im/image/mobile.png" alt="this is phone" id="phone" />
         </div>
 
         <script>
-            (function(){
+            (function () {
                 var burger = document.querySelector(".burger");
-                var nav = document.querySelector("#"+burger.dataset.target);
+                var nav = document.querySelector("#" + burger.dataset.target);
 
-                burger.addEventListener("click",function(){
-                    burger.classList.toggle("is-active")
-                    nav.classList.toggle("is-active")
-                })
+                burger.addEventListener("click", function () {
+                    burger.classList.toggle("is-active");
+                    nav.classList.toggle("is-active");
+                });
             })();
         </script>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     </body>
 </html>

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@ body {
   height: 100vh;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-  font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
   background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
   background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
   background-repeat: no-repeat;
@@ -34,7 +33,7 @@ body .navbar-bg a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   -webkit-transform: scale(1.03);
-  transform: scale(1.03);
+          transform: scale(1.03);
   border-radius: 3.5px;
 }
 
@@ -58,8 +57,8 @@ body .table-style {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .table {
@@ -90,28 +89,23 @@ body .table a:hover {
   body body {
     height: 100;
   }
-
   body .hr {
     visibility: visible;
   }
-
   body .table-title h3 {
     font-size: 1.3rem;
   }
-
   body .table {
     overflow-x: auto;
     height: 80%;
     background-color: transparent;
   }
-
   body .table td,
   body .table th {
     border: 0;
     padding-left: 20px;
     padding-right: 20px;
   }
-
   body .table a {
     text-decoration: none;
     font-size: 1.2rem;
@@ -119,8 +113,7 @@ body .table a:hover {
   }
 }
 
-body>div:nth-child(2)>table {
+body > div:nth-child(2) > table {
   background-color: black;
 }
-
 /*# sourceMappingURL=elder_rating.css.map */
