@@ -86,7 +86,6 @@
                 </div>
                 <div class="column">
                     <div class="select">
-                        <!-- <label for="district">鄉鎮市區：</label> -->
                         <select name="district" id="district_menu">
                             <option value="請選擇">請選擇鄉鎮市區</option>
                         </select>
@@ -94,15 +93,23 @@
                 </div>
                 <div class="column">
                     <div class="select">
-                        <!-- <label for="fac-name">名稱：</label> -->
                         <select name="name" id="id_menu">
                             <option value="請選擇">請選擇機構名稱</option>
                         </select>
                     </div>
                 </div>
                 <div class="column">
-                    <!-- <label for="rating">評分：</label> -->
-                    <input class="input" type="number" placeholder="請輸入評分(0~5)" name="rating" min="0" max="5" />
+                    <div class="select">
+                        <select class="input" name="rating" placeholder="請輸入評分(0~5)">
+                            <option value="請選擇">請選擇評分</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="column">
                     <button class="button" type="submit">送出評分</button>
@@ -113,9 +120,7 @@
             <h3>本行政區評分最高的五所幼兒園</h3>
         </div>
         <div class="container recommend-table box">
-            <table class="table is-bordered" id="recommend">
-            </table>
-            
+            <table class="table is-bordered" id="recommend"></table>
         </div>
         <script>
             function buildHtmlTable(selector, myList) {
@@ -134,7 +139,7 @@
                             }
                         }
                         if (colIndex == 2) cellValue = cellValue.slice(6);
-                        if (colIndex == 4) cellValue = Math.round(cellValue*10)/10;
+                        if (colIndex == 4) cellValue = Math.round(cellValue * 10) / 10;
                         row$.append($("<td/>").html(cellValue));
                         if (i == 0) {
                             headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
@@ -179,14 +184,14 @@
         </script>
         <script src="child.js"></script>
         <script>
-            (function(){
+            (function () {
                 var burger = document.querySelector(".burger");
-                var nav = document.querySelector("#"+burger.dataset.target);
+                var nav = document.querySelector("#" + burger.dataset.target);
 
-                burger.addEventListener("click",function(){
-                    burger.classList.toggle("is-active")
-                    nav.classList.toggle("is-active")
-                })
+                burger.addEventListener("click", function () {
+                    burger.classList.toggle("is-active");
+                    nav.classList.toggle("is-active");
+                });
             })();
         </script>
     </body>
