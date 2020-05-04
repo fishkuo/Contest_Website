@@ -84,6 +84,7 @@ body .navbar-bg a:hover {
   background-color: transparent;
   color: white;
   font-size: 18px;
+  font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
   border-radius: 3px;
   border: 1px solid;
   -webkit-transition: -webkit-transform 0.4s;
