@@ -195,4 +195,8 @@ body .navbar-bg a:hover {
             transform: translate(30vw, 12vw) rotate(90deg);
   }
 }
+
+body {
+  overflow: hidden !important;
+}
 /*# sourceMappingURL=elder_map.css.map */
