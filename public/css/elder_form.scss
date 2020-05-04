@@ -2,13 +2,15 @@
 @import "_formTheme";
 
 .table-header {
-	flex-direction: column;
-	.link a {
-		text-decoration: none;
-		color: white;
-		font-size: 1.2rem;
-		&:hover {
-			color: rgba(255, 255, 255, 0.5);
-		}
-	}
+    flex-direction: column;
+
+    .link a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+
+        &:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
 }

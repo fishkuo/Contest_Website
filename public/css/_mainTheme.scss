@@ -1,32 +1,36 @@
 body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100vh;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-	font-family: "微軟正黑體", Arial, Helvetica, sans-serif;
-	background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	background-blend-mode: overlay;
-	.navbar-bg {
-		background-color: transparent;
-		font-size: 20px;
-		margin: 20px;
-		a {
-			color: white;
-			transition: transform 0.4s;
-			&:hover {
-				background-color: rgba(0, 0, 0, 0.2);
-				color: white;
-				transform: scale(1.03);
-				border-radius: 3.5px;
-			}
-		}
-	}
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
+    background: url(image/three_gen.jpg), linear-gradient(rgba(83, 71, 35, 0.7), rgba(0, 0, 0, 0.8));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+
+    .navbar-bg {
+        background-color: transparent;
+        font-size: 20px;
+        margin: 20px;
+
+        a {
+            color: white;
+            transition: transform 0.4s;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.2);
+                color: white;
+                transform: scale(1.03);
+                border-radius: 3.5px;
+            }
+        }
+    }
 }
+
 #navbarBasicExample {
-	background-color: transparent;
+    background-color: transparent;
 }

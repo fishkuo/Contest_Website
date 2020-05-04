@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ body .navbar-bg a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  transform: scale(1.03);
   border-radius: 3.5px;
 }
 
@@ -44,7 +45,7 @@ body .navbar-bg a:hover {
 .box {
   background-color: transparent;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .table-header {
@@ -52,8 +53,8 @@ body .navbar-bg a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: transparent;
   font-size: 1.4rem;
   color: white;
@@ -64,8 +65,8 @@ body .navbar-bg a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: transparent;
 }
 
@@ -84,8 +85,8 @@ body .navbar-bg a:hover {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .column select,
@@ -127,6 +128,7 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 1380px) {
+
   .column select,
   .column input,
   .column button {
@@ -135,6 +137,7 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 1080px) {
+
   .column select,
   .column input,
   .column button {
@@ -143,6 +146,7 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 1023px) {
+
   .column select,
   .column input,
   .column button {
@@ -151,11 +155,13 @@ body .navbar-bg a:hover {
 }
 
 @media all and (max-width: 768px) {
+
   .column select,
   .column input,
   .column button {
     width: 170px;
   }
+
   .table-header {
     font-size: 1.3rem;
   }
@@ -164,8 +170,8 @@ body .navbar-bg a:hover {
 .table-header {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .table-header .link a {
@@ -177,4 +183,5 @@ body .navbar-bg a:hover {
 .table-header .link a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
+
 /*# sourceMappingURL=elder_form.css.map */

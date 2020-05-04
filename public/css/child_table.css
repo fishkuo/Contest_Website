@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 body {
   margin: 0;
   padding: 0;
@@ -33,7 +34,7 @@ body .navbar-bg a:hover {
   background-color: rgba(0, 0, 0, 0.2);
   color: white;
   -webkit-transform: scale(1.03);
-          transform: scale(1.03);
+  transform: scale(1.03);
   border-radius: 3.5px;
 }
 
@@ -48,12 +49,12 @@ form,
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: transparent;
   color: white;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   font-weight: 400;
 }
 
@@ -63,7 +64,7 @@ form table,
   background-color: transparent;
   color: white;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   background-color: rgba(0, 0, 0, 0.329);
 }
 
@@ -71,7 +72,7 @@ form table,
   background-color: transparent;
   color: white;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 table {
@@ -95,4 +96,5 @@ table {
   color: white;
   width: 200px;
 }
+
 /*# sourceMappingURL=child_table.css.map */

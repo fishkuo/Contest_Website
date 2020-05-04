@@ -1,47 +1,49 @@
 @mixin flexCenter {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 @mixin tranparent {
-	background-color: transparent;
-	color: white;
-	box-shadow: none;
+    background-color: transparent;
+    color: white;
+    box-shadow: none;
 }
 
 .recommend-table,
 form,
 .title {
-	@include flexCenter();
-	@include tranparent();
-	font-weight: 400;
-	table {
-		@include tranparent();
-		background-color: rgba(0, 0, 0, 0.329);
-	}
+    @include flexCenter();
+    @include tranparent();
+    font-weight: 400;
+
+    table {
+        @include tranparent();
+        background-color: rgba(0, 0, 0, 0.329);
+    }
 }
 
 .box {
-	@include tranparent();
+    @include tranparent();
 }
 
 table {
-	margin-bottom: 50px;
-	margin-left: 20px;
-	margin-right: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .table th {
-	color: white;
+    color: white;
 }
 
 .select {
-	margin-left: 20px;
-	margin-right: 20px;
-	width: 150px;
-	select {
-		background-color: rgba(0, 0, 0, 0.329);
-		color: white;
-		width: 200px;
-	}
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 150px;
+
+    select {
+        background-color: rgba(0, 0, 0, 0.329);
+        color: white;
+        width: 200px;
+    }
 }
