@@ -1,99 +1,95 @@
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .box {
-    background-color: transparent;
-    box-shadow: none;
+	background-color: transparent;
+	box-shadow: none;
 }
 
 .table-header {
-    @include flexCenter();
-    background-color: transparent;
-    font-size: 1.4rem;
-    color: white;
+	@include flexCenter();
+	background-color: transparent;
+	font-size: 1.4rem;
+	color: white;
 }
 
 .recommend-table {
-    @include flexCenter();
-    background-color: transparent;
+	@include flexCenter();
+	background-color: transparent;
 
-    .table {
-        background-color: rgba(0, 0, 0, 0.329);
-        color: white;
+	.table {
+		background-color: rgba(0, 0, 0, 0.329);
+		color: white;
 
-        th {
-            color: white;
-        }
-    }
+		th {
+			color: white;
+		}
+	}
 }
 
 .column {
-    margin-top: 3%;
-    @include flexCenter();
+	margin-top: 3%;
+	@include flexCenter();
 
-    select,
-    input,
-    button {
-        width: 220px;
-        background-color: rgba(0, 0, 0, 0.329);
-        color: white;
+	select,
+	input,
+	button {
+		width: 220px;
+		background-color: rgba(0, 0, 0, 0.329);
+		color: white;
 
-        &::placeholder {
-            color: white;
-        }
+		&::placeholder {
+			color: white;
+		}
 
-        &:hover {
-            color: white;
-        }
-    }
+		&:hover {
+			color: white;
+		}
+	}
 }
 
 @media all and (max-width: 1380px) {
-    .column {
-
-        select,
-        input,
-        button {
-            width: 170px;
-        }
-    }
+	.column {
+		select,
+		input,
+		button {
+			width: 170px;
+		}
+	}
 }
 
 @media all and (max-width: 1080px) {
-    .column {
-
-        select,
-        input,
-        button {
-            width: 160px;
-        }
-    }
+	.column {
+		select,
+		input,
+		button {
+			width: 160px;
+		}
+	}
 }
 
 @media all and (max-width: 1023px) {
-    .column {
-
-        select,
-        input,
-        button {
-            width: 200px;
-        }
-    }
+	.column {
+		select,
+		input,
+		button {
+			width: 200px;
+		}
+	}
 }
 
 @media all and (max-width: 768px) {
-    .column {
+	.column {
+		select,
+		input,
+		button {
+			width: 170px;
+		}
+	}
 
-        select,
-        input,
-        button {
-            width: 170px;
-        }
-    }
-
-    .table-header {
-        font-size: 1.3rem;
-    }
+	.table-header {
+		font-size: 1.3rem;
+	}
 }
