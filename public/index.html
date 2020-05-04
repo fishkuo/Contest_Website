@@ -12,8 +12,8 @@
         <div class="container">
             <nav class="navbar navbar-bg" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="#">
-                        <img src="css/image/logo.png" width="160" height="100"/>
+                    <a class="navbar-item" href="/index.html">
+                        <img src="css/image/logo.png" width="180" />
                     </a>
 
                     <a
@@ -60,14 +60,14 @@
             </div>
         </div>
         <script>
-            (function(){
+            (function () {
                 var burger = document.querySelector(".burger");
-                var nav = document.querySelector("#"+burger.dataset.target);
+                var nav = document.querySelector("#" + burger.dataset.target);
 
-                burger.addEventListener("click",function(){
-                    burger.classList.toggle("is-active")
-                    nav.classList.toggle("is-active")
-                })
+                burger.addEventListener("click", function () {
+                    burger.classList.toggle("is-active");
+                    nav.classList.toggle("is-active");
+                });
             })();
         </script>
     </body>

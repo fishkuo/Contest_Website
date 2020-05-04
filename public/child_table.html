@@ -14,8 +14,8 @@
         <div class="container">
             <nav class="navbar navbar-bg" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="https://bulma.io">
-                        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
+                    <a class="navbar-item" href="/index.html">
+                        <img src="css/image/logo.png" width="180" />
                     </a>
 
                     <a
@@ -52,7 +52,7 @@
                 </div>
             </nav>
         </div>
-        <div class="container box ">
+        <div class="container box">
             <form class="form" action="/add_review" method="POST">
                 <div class="city select">
                     <!-- <label for="city">縣市：</label> -->
@@ -93,8 +93,7 @@
             <div class="table-header">本區評分最高的十所幼兒園</div>
         </div>
         <div class="recommend-table">
-            <table class="table is-bordered " id="recommend" border="1">
-            </table>
+            <table class="table is-bordered" id="recommend" border="1"></table>
         </div>
 
         <script>
@@ -114,7 +113,7 @@
                             }
                         }
                         if (colIndex == 2) cellValue = cellValue.slice(6);
-                        if (colIndex == 4) cellValue = Math.round(cellValue*10)/10;
+                        if (colIndex == 4) cellValue = Math.round(cellValue * 10) / 10;
                         row$.append($("<td/>").html(cellValue));
                         if (i == 0) {
                             headerTr$.append($("<th/>").html(columns_fixed[colIndex]));
@@ -169,14 +168,14 @@
         <script src="dynamic.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet" />
         <script>
-            (function(){
+            (function () {
                 var burger = document.querySelector(".burger");
-                var nav = document.querySelector("#"+burger.dataset.target);
+                var nav = document.querySelector("#" + burger.dataset.target);
 
-                burger.addEventListener("click",function(){
-                    burger.classList.toggle("is-active")
-                    nav.classList.toggle("is-active")
-                })
+                burger.addEventListener("click", function () {
+                    burger.classList.toggle("is-active");
+                    nav.classList.toggle("is-active");
+                });
             })();
         </script>
     </body>
