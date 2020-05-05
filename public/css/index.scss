@@ -1,51 +1,65 @@
 @import "_mainTheme";
 
 .project-title {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 60%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	height: 60%;
 
-    h1 {
-        padding-top: 150px;
-        color: white;
-        animation: fadein 3s;
-    }
+	h1 {
+		font-size: 50px;
+		padding-top: 150px;
+		color: white;
+		animation: fadein 3s;
+	}
 
-    h2 {
-        color: white;
-        animation: fadein 3s;
-    }
+	h2 {
+		font-size: 35px;
+		color: white;
+		animation: fadein 3s;
+	}
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+	display: flex;
+	justify-content: center;
+	margin: 20px;
 
-    a {
-        color: #ffffff;
-    }
+	a {
+		color: #ffffff;
+	}
 
-    button {
-        margin: 20px;
-        height: 40px;
-        width: 110px;
-        background-color: transparent;
-        color: white;
-        font-size: 18px;
-        font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
-        border-radius: 3px;
-        border: 1px solid;
-        transition: transform 0.4s;
+	button {
+		margin: 20px;
+		height: 40px;
+		width: 110px;
+		background-color: transparent;
+		color: white;
+		font-size: 18px;
+		font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
+		border-radius: 3px;
+		border: 1px solid;
+		transition: transform 0.4s;
 
-        &:hover {
-            color: rgb(255, 240, 108);
-            border: 2px solid;
+		&:hover {
+			color: rgb(255, 240, 108);
+			border: 2px solid;
 
-            a {
-                color: rgb(255, 240, 108);
-            }
-        }
-    }
+			a {
+				color: rgb(255, 240, 108);
+			}
+		}
+	}
+}
+
+@media all and (max-width: 414px) {
+	.project-title {
+		h1 {
+			font-size: 40px;
+		}
+
+		h2 {
+			font-size: 28px;
+		}
+	}
 }

@@ -73,6 +73,7 @@ body .navbar-bg a:hover {
 }
 
 .project-title h1 {
+  font-size: 50px;
   padding-top: 150px;
   color: white;
   -webkit-animation: fadein 3s;
@@ -80,6 +81,7 @@ body .navbar-bg a:hover {
 }
 
 .project-title h2 {
+  font-size: 35px;
   color: white;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
@@ -122,5 +124,14 @@ body .navbar-bg a:hover {
 
 .buttons button:hover a {
   color: #fff06c;
+}
+
+@media all and (max-width: 414px) {
+  .project-title h1 {
+    font-size: 40px;
+  }
+  .project-title h2 {
+    font-size: 28px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
