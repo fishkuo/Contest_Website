@@ -1,11 +1,15 @@
 @charset "UTF-8";
+html {
+  overflow-y: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: none;
   -webkit-overflow-scrolling: touch;
   font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
   background: url(image/three_gen.jpg), -webkit-gradient(linear, left top, left bottom, from(rgba(83, 71, 35, 0.7)), to(rgba(0, 0, 0, 0.8)));
@@ -91,6 +95,10 @@ body .navbar-bg a:hover {
   margin: 20px;
 }
 
+.buttons a {
+  color: #ffffff;
+}
+
 .buttons button {
   margin: 20px;
   height: 40px;
@@ -110,70 +118,9 @@ body .navbar-bg a:hover {
 .buttons button:hover {
   color: #fff06c;
   border: 2px solid;
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
 }
 
 .buttons button:hover a {
   color: #fff06c;
-}
-
-.buttons button a {
-  text-decoration: none;
-  color: white;
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@media all and (max-width: 1440px) {
-  .footer {
-    margin-top: 10%;
-  }
-}
-
-@media all and (max-width: 1180px) {
-  .footer {
-    margin-top: 13%;
-  }
-}
-
-@media all and (max-width: 990px) {
-  .footer {
-    margin-top: 15%;
-  }
-}
-
-@media all and (max-width: 768px) {
-  .footer {
-    margin-top: 18%;
-  }
-}
-
-@media all and (max-width: 415px) {
-  .footer {
-    margin-top: 30%;
-  }
-}
-
-@media all and (max-width: 376px) {
-  .footer {
-    margin-top: 25%;
-  }
 }
 /*# sourceMappingURL=index.css.map */

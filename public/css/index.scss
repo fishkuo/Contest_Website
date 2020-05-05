@@ -1,97 +1,51 @@
 @import "_mainTheme";
 
 .project-title {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	height: 60%;
-	h1 {
-		padding-top: 150px;
-		color: white;
-		animation: fadein 3s;
-	}
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 60%;
 
-	h2 {
-		color: white;
-		animation: fadein 3s;
-	}
+    h1 {
+        padding-top: 150px;
+        color: white;
+        animation: fadein 3s;
+    }
+
+    h2 {
+        color: white;
+        animation: fadein 3s;
+    }
 }
 
 .buttons {
-	display: flex;
-	justify-content: center;
-	margin: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 
-	button {
-		margin: 20px;
-		height: 40px;
-		width: 110px;
-		background-color: transparent;
-		color: white;
-		font-size: 18px;
-		font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
-		border-radius: 3px;
-		border: 1px solid;
-		transition: transform 0.4s;
+    a {
+        color: #ffffff;
+    }
 
-		&:hover {
-			color: rgb(255, 240, 108);
-			border: 2px solid;
+    button {
+        margin: 20px;
+        height: 40px;
+        width: 110px;
+        background-color: transparent;
+        color: white;
+        font-size: 18px;
+        font-family: "微軟正黑體", Arial, Helvetica, sans-serif !important;
+        border-radius: 3px;
+        border: 1px solid;
+        transition: transform 0.4s;
 
-			a {
-				color: rgb(255, 240, 108);
-			}
+        &:hover {
+            color: rgb(255, 240, 108);
+            border: 2px solid;
 
-			transform: scale(1.08);
-		}
-
-		a {
-			text-decoration: none;
-			color: white;
-		}
-	}
-}
-
-@keyframes fadein {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
-}
-
-@media all and (max-width: 1440px) {
-	.footer {
-		margin-top: 10%;
-	}
-}
-
-@media all and (max-width: 1180px) {
-	.footer {
-		margin-top: 13%;
-	}
-}
-@media all and (max-width: 990px) {
-	.footer {
-		margin-top: 15%;
-	}
-}
-@media all and (max-width: 768px) {
-	.footer {
-		margin-top: 18%;
-	}
-}
-
-@media all and (max-width: 415px) {
-	.footer {
-		margin-top: 30%;
-	}
-}
-
-@media all and (max-width: 376px) {
-	.footer {
-		margin-top: 25%;
-	}
+            a {
+                color: rgb(255, 240, 108);
+            }
+        }
+    }
 }
