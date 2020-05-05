@@ -69,7 +69,6 @@ body .navbar-bg a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 60%;
 }
 
 .project-title h1 {
@@ -133,5 +132,9 @@ body .navbar-bg a:hover {
   .project-title h2 {
     font-size: 28px;
   }
+}
+
+.footer {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=index.css.map */
